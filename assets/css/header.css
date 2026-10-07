@@ -1,0 +1,14 @@
+/*======== Global Variables and reset ======*/
+:root {
+  --deep-fairway-green: #1b4d3e;
+  --muted-sage: #8a9a86;
+  --warm-brass: #d4af37;
+  --soft-of-white: #f8f9fa;
+  --charcoal-grey: #212529;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
