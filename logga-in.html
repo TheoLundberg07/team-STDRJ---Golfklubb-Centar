@@ -1,11 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content=""
-    />
+    <meta name="description" content="" />
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -35,7 +32,39 @@
     <header class="header" id="header"></header>
 
     <!--==================== MAIN ====================-->
-    <main class="main"></main>
+    <main class="main">
+      <div class="container">
+        <div class="brand-logo"></div>
+        <div class="brand-title">Medlemsinloggning</div>
+        <p class="inlog-text">
+          Logga in med ditt Golf-ID eller epost för att se handicap och
+          medlemsförmåner
+        </p>
+        <form class="inputs">
+          <label for="email">e-postadress</label>
+          <input type="email" name="" id="email" placeholder="namn@epost.com" />
+          <label for="password">Lösenord</label>
+          <input
+            type="password"
+            name=""
+            id="password"
+            placeholder="Ditt lösenord"
+          />
+          <input type="checkbox" name="" id="" /> Kom ihåg mig på denna enhet
+          <a href="#">Glömt lösenord?</a>
+          <button type="submit">Logga in</button>
+          <div class="alt-login">
+            <div class="divider" role="separator">
+              <span>Eller fortsätt med</span>
+              <button type="button" class="alt-login">
+                <img src="min-golf.svg" alt="" width="24" height="24" />
+                Logga in med Min Golf (SGF)
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
 
     <!--==================== FOOTER ====================-->
     <footer class="footer"></footer>
