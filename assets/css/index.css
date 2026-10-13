@@ -119,19 +119,12 @@ nav {
   height: 100%;
 }
 
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 .links {
   color: var(--text-color);
   position: relative;
   font-weight: var(--font-semi-bold);
 }
+
 #desktop-menu .links {
   font-size: var(--navbar-links);
 }
@@ -147,6 +140,7 @@ a {
   border-radius: 100px;
   transition: 0.25s ease-in-out;
 }
+
 .links:hover::after {
   width: 100%;
 }
@@ -192,6 +186,7 @@ a {
   background-color: transparent;
   transition: 200ms ease;
 }
+
 .logga-in-desktop:hover {
   color: var(--first-color);
   scale: 1.05;
@@ -204,6 +199,7 @@ a {
   cursor: pointer;
   fill: var(--text-color-alt);
 }
+
 .shop-desktop:hover {
   fill: var(--first-color);
 }
@@ -220,6 +216,7 @@ a {
   fill: var(--first-color);
   transition: 200ms ease;
 }
+
 .open-menu:hover {
   fill: var(--first-color-alt);
 }
@@ -227,9 +224,11 @@ a {
 .shop-mobile {
   display: none;
 }
+
 .logga-in-mobile {
   display: none;
 }
+
 .button-container-mobile {
   display: none;
 }
@@ -270,6 +269,7 @@ a {
   background-color: transparent;
   transition: 200ms ease;
 }
+
 .logga-in-mobile:hover {
   color: var(--first-color);
   scale: 1.05;
@@ -282,6 +282,7 @@ a {
   cursor: pointer;
   fill: var(--text-color-alt);
 }
+
 .shop-mobile:hover {
   fill: var(--first-color);
 }
@@ -303,6 +304,7 @@ a {
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(2px);
 }
+
 @starting-style {
   #mobile-menu:popover-open {
     opacity: 0.5;
@@ -318,6 +320,7 @@ a {
   fill: var(--first-color);
   transition: 200ms ease;
 }
+
 .close-menu:hover {
   fill: var(--first-color-alt);
 }
