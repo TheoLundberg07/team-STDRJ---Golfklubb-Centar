@@ -1,55 +1,49 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3.5rem;
-
   /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(358, 54%, 48%);
-  --first-color-alt: hsl(358, 54%, 46%);
-  --first-color-light: hsl(358, 50%, 58%);
-  --title-color: hsl(34, 8%, 16%);
-  --text-color: hsl(34, 8%, 40%);
-  --white-color: hsl(34, 64%, 98%);
-  --gray-color: hsl(34, 8%, 85%);
-  --body-color: hsl(34, 100%, 94%);
-  --body-color-alt: hsl(34, 70%, 88%);
-  --container-color: hsl(34, 32%, 98%);
+  --first-color: #1b4d3e;
+  --first-color-alt: #735c00;
+  --first-color-light: #d4e4ce;
+  --title-color: #003629;
+  --text-color: #404945;
+  --text-color-alt: #181c20;
+
+  --body-color: #ffffff;
+  --body-color-alt: #f7f9ff;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Montserrat", sans-serif;
-  --second-font: "Lora", serif;
+  --noto-font-family: "Noto Serif", serif;
+  --manrope-font-family: "Manrope", sans-serif;
+
   --biggest-font-size: 2rem;
   --bigger-font-size: 1.5rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
 
   /*========== Font weight ==========*/
   --font-regular: 400;
   --font-medium: 500;
   --font-semi-bold: 600;
-
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
 }
 
 /*========== Responsive typography ==========*/
 @media screen and (width >= 1150px) {
   :root {
-    --biggest-font-size: 3.5rem;  
+    --biggest-font-size: 3.5rem;
     --bigger-font-size: 3rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: .875rem;
+    --small-font-size: 0.875rem;
   }
 }
 
@@ -67,8 +61,7 @@ html {
 body,
 input,
 button {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
+  font-family: var(--manrope-font-family);
 }
 
 body {
@@ -82,10 +75,13 @@ button {
   outline: none;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
-  font-family: var(--second-font);
+  font-family: var(--noto-font-family);
 }
 
 ul {
@@ -100,98 +96,247 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-/*=============== REUSABLE CSS CLASSES ===============*/
-.container {
-  max-width: 1120px;
-  margin-inline: 1rem;
-}
-
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.section {
-  padding-block: 5rem 1rem;
-}
-
-.section__title {
-  text-align: center;
-  font-size: var(--bigger-font-size);
-  margin-bottom: 1rem;
-}
-
-.section__title span {
-  color: var(--first-color);
-}
-
-.section__subtitle {
-  display: block;
-  text-align: center;
-  font: var(--font-semi-bold) var(--small-font-size) var(--second-font);
-  color: var(--first-color);
-  margin-bottom: .5rem;
-}
-
-.main {
-  overflow: hidden;
+  z-index: 9;
 }
 
 /*=============== HEADER & NAV ===============*/
 
+nav {
+  width: 100%;
+  background-color: var(--body-color-alt);
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
 
-/* Navigation for mobile devices */
+#desktop-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 550px;
+  height: 100%;
+}
 
+li {
+  list-style: none;
+}
 
-/* Show menu */
+a {
+  text-decoration: none;
+}
 
+.links {
+  color: var(--text-color);
+  position: relative;
+  font-weight: var(--font-semi-bold);
+}
+#desktop-menu .links {
+  font-size: var(--navbar-links);
+}
 
-/* Change header styles */
+.links::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, var(--first-color-alt));
+  height: 4px;
+  width: 0;
+  left: 0;
+  bottom: -6px;
+  border-radius: 100px;
+  transition: 0.25s ease-in-out;
+}
+.links:hover::after {
+  width: 100%;
+}
 
+.links:hover {
+  color: var(--first-color-alt);
+}
 
-/* Active link */
+.active {
+  color: var(--first-color-alt);
+}
 
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.download-button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  font-size: var(--normal-font-size);
+  font-weight: var(--body-color);
+  transition: 200ms ease;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  scale: 1.05;
+  box-shadow: 0 3px 15px var(--first-color);
+}
+
+.logga-in-desktop {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  font-size: var(--normal-font-size);
+  color: var(--text-color-alt);
+  font-weight: var(--font-semi-bold);
+  background-color: transparent;
+  transition: 200ms ease;
+}
+.logga-in-desktop:hover {
+  color: var(--first-color);
+  scale: 1.05;
+}
+
+.shop-desktop {
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  cursor: pointer;
+  fill: var(--text-color-alt);
+}
+.shop-desktop:hover {
+  fill: var(--first-color);
+}
+
+/* ========== Mobile Menu ========== */
+
+.open-menu {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  display: none;
+  cursor: pointer;
+  fill: var(--first-color);
+  transition: 200ms ease;
+}
+.open-menu:hover {
+  fill: var(--first-color-alt);
+}
+
+.shop-mobile {
+  display: none;
+}
+.logga-in-mobile {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  #desktop-menu {
+    display: none;
+  }
+  .button-container {
+    display: none;
+  }
+  .open-menu {
+    display: inline-block;
+  }
+  .shop-mobile {
+    display: inline-block;
+  }
+  .logga-in-mobile {
+    display: inline-block;
+  }
+  nav{
+    padding: 0 20px;
+  }
+}
+
+.button-container-mobile{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logga-in-mobile{
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  font-size: var(--normal-font-size);
+  color: var(--text-color-alt);
+  font-weight: var(--font-semi-bold);
+  background-color: transparent;
+  transition: 200ms ease;
+}
+.logga-in-mobile:hover {
+  color: var(--first-color);
+  scale: 1.05;
+}
+
+.shop-mobile {
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  cursor: pointer;
+  fill: var(--text-color-alt);
+}
+.shop-mobile:hover{
+  fill: var(--first-color);
+}
+
+[popover] {
+  background-color: var(--body-color);
+  position: fixed;
+  inset: 0;
+  margin: 0 0 0 auto;
+  min-width: 300px;
+  min-height: 400px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  box-shadow: -20px 20px 50px hsla(0, 0%, 0, 0.3);
+  transition: all 0.25s ease;
+}
+
+[popover]::backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+}
+@starting-style {
+  #mobile-menu:popover-open {
+    opacity: 0.5;
+    transform: translateX(350px);
+  }
+}
+
+.close-menu {
+  margin: 25px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  fill: var(--first-color);
+  transition: 200ms ease;
+}
+.close-menu:hover {
+  fill: var(--first-color-alt);
+}
+
+.mobile-menu li {
+  width: auto;
+  text-align: start;
+  margin: 0 0 20px 30px;
+}
+
+.mobile-menu .links {
+  font-size: var(--bigger-font-size);
+}
 
 /*=============== HOME SECTION ===============*/
 
-
-/*=============== BUTTON ===============*/
-
-
-/*=============== ABOUT SECTION ===============*/
-
-
-/*=============== MENU SECTION ===============*/
-
-
-/* Swiper class */
-
-
-/*=============== NEW SECTION ===============*/
-
-
-/*=============== CONTACT SECTION ===============*/
-
-
 /*=============== FOOTER ===============*/
 
-
-/*=============== SCROLL BAR ===============*/
-
-
-/*=============== SCROLL UP ===============*/
-
-
-/*=============== BREAKPOINTS ===============*/
 /* For small devices <> */
-
 
 /* For medium devices <> */
 
-
 /* For large devices <> */
-
 
 /* For 2K resolutions <> */
