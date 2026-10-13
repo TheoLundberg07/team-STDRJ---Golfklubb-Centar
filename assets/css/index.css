@@ -230,6 +230,9 @@ a {
 .logga-in-mobile {
   display: none;
 }
+.button-container-mobile {
+  display: none;
+}
 
 @media (max-width: 1100px) {
   #desktop-menu {
@@ -247,17 +250,17 @@ a {
   .logga-in-mobile {
     display: inline-block;
   }
-  nav{
+  nav {
     padding: 0 20px;
+  }
+  .button-container-mobile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 }
 
-.button-container-mobile{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.logga-in-mobile{
+.logga-in-mobile {
   width: 100px;
   height: 40px;
   cursor: pointer;
@@ -279,7 +282,7 @@ a {
   cursor: pointer;
   fill: var(--text-color-alt);
 }
-.shop-mobile:hover{
+.shop-mobile:hover {
   fill: var(--first-color);
 }
 
