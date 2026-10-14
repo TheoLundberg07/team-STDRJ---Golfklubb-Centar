@@ -311,103 +311,12 @@ img {
   border-radius: 4px;
   box-shadow: 3px 3px 15px #5b5b5b32;
 }
-<<<<<<< HEAD
-
-.footer-logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  align-self: stretch;
-}
-
-.footer-logo-container a {
-  font-size: var(--h2-font-size);
-  color: var(--body-color-alt);
-}
-
-.footer-links {
-  color: var(--body-color-alt);
-}
-
-.footer-links a {
-  color: var(--first-color-light);
-}
-
-.footer-links a:hover {
-  color: var(--body-color-alt);
-}
-
-.footer-links li {
-  margin-bottom: 8px;
-}
-
-#utforska {
-  margin-bottom: 12px;
-}
-
-#service {
-  margin-bottom: 12px;
-}
-
-.footer-line {
-=======
 .card img{
   height:230px;
->>>>>>> Startsida
   width: 100%;
   object-fit: cover;
   border-radius: 4px 4px 0 0;
 
-<<<<<<< HEAD
-.rättigheter-container {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  gap: 35px;
-}
-
-.policy {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
-}
-.policy a {
-  color: var(--first-color-light);
-}
-
-.policy a:hover {
-  color: var(--body-color-alt);
-}
-
-@media (max-width: 750px) {
-  .container-top {
-    display: flex;
-    align-self: stretch;
-    flex-direction: column;
-    gap: 35px;
-  }
-  .footer-logo-container {
-    flex-wrap: wrap;
-  }
-}
-@media (max-width: 1300px) {
-  .rättigheter-container {
-    flex-direction: column;
-  }
-  .rättigheter {
-    width: 100%;
-  }
-  .policy-container {
-    width: 100%;
-  }
-  .policy {
-    justify-content: flex-start;
-  }
-=======
   
 }
 
@@ -447,5 +356,4 @@ img {
 
 main {
   height: 600vh;
->>>>>>> Startsida
 }
