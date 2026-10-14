@@ -5,15 +5,16 @@
 :root {
   /*======== Colors =======*/
   --first-color: #1b4d3e;
-  --first-color-light: #8a9a86;
-  --first-color-alt: #d4af37;
+  --first-color-light: #8abda9;
+  --first-color-alt: #735c00;
   --title-color: #003629;
   --text-color: #404945;
-  --text-color-alt: #212529;
-  --body-text-color: #f8f9fa;
+  --text-color-alt: #151c20;
+  --body-text-color: #f7f9ff;
+  --border: #c0c9c399;
 
   --body-color: #fff;
-  --body-color-alt: #f8f9fa;
+  --body-color-alt: #f7f9ff;
 
   /*========= Font and typography =======*/
   --noto-font-family: "Noto Serif", serif;
@@ -46,17 +47,56 @@
   }
 }
 
+/*=============== BASE ===============*/
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+button {
+  font-family: var(--manrope-font-family);
 }
 
 body {
-  background-color: var(--body-text-color);
-  font-family: var(--manrope-font-family);
-  font-size: var(--normal-font-size);
-  color: #212529;
+  background-color: var(--body-color-alt);
+  color: var(--text-color);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-family: var(--noto-font-family);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  z-index: 9;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -77,7 +117,6 @@ nav {
   align-items: center;
   width: 550px;
   height: 100%;
-  list-style-type: none;
 }
 
 .links {
@@ -142,7 +181,6 @@ nav {
   width: 100px;
   height: 40px;
   cursor: pointer;
-  border: none;
   font-size: var(--normal-font-size);
   color: var(--text-color-alt);
   font-weight: var(--font-semi-bold);
@@ -157,7 +195,6 @@ nav {
 .shop-desktop {
   height: 24px;
   width: 24px;
-  border: none;
   background-color: transparent;
   cursor: pointer;
   fill: var(--text-color-alt);
@@ -314,9 +351,13 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid color-mix(in srgb, var(--text-color) 10%, transparent);
+  border: 1px solid var(--border);
   border-radius: 8px;
   margin: 5rem 0;
+}
+
+.container a {
+  text-decoration: underline;
 }
 
 .container .brand-logo {
@@ -336,7 +377,7 @@ nav {
   color: var(--first-color);
   font-weight: var(--font-medium);
   letter-spacing: -0.7px;
-  font-size: var(--biggest-font-size);
+  font-size: 2.5rem;
 }
 
 .inlog-text {
@@ -363,13 +404,13 @@ input {
   padding: 13px 16px;
   font-size: var(--normal-font-size);
   font-weight: 50;
-  border: 2px solid color-mix(in srgb, var(--text-color) 10%, transparent);
+  border: 1px solid var(--border);
   margin-bottom: 1.5rem;
   border-radius: 2px;
 }
 
 input::placeholder {
-  color: var(--border);
+  color: var(--text-color);
   font-weight: 100;
 }
 
@@ -391,6 +432,10 @@ input[type="checkbox"] {
   height: auto;
   padding: 0;
   margin: 0;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--first-color);
 }
 
 .flex {
@@ -436,16 +481,19 @@ input[type="checkbox"] {
 .divider::after {
   content: "";
   flex: 1;
-  height: 2px;
-  background: color-mix(in srgb, var(--text-color) 20%, transparent);
+  height: 1px;
+  background: var(--border);
 }
 
 .divider h2 {
-  font-size: 11px;
+  font-size: var(--small-font-size);
+  font-family: var(--manrope-font-family);
+  font-weight: var(--font-regular);
+  color: var(--text-color);
 }
 
 .container button {
-  border: 2px solid color-mix(in srgb, var(--text-color) 10%, transparent);
+  border: 1px solid var(--border);
   background-color: var(--body-color);
   display: inline;
   align-items: center;
@@ -458,7 +506,8 @@ input[type="checkbox"] {
 }
 
 hr {
-  border: 2px solid color-mix(in srgb, var(--text-color) 20%, transparent);
+  border: 0;
+  border-top: 1px solid var(--border);
   margin-bottom: 2rem;
 }
 
