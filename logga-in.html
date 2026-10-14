@@ -34,35 +34,35 @@
     <!--==================== MAIN ====================-->
     <main class="main">
       <div class="container">
-        <div class="brand-logo"></div>
-        <div class="brand-title">Medlemsinloggning</div>
+        <span class="brand-logo"
+          ><img src="./assets/img/GkCLogo.svg" alt="Golfklubb Centar Logga"
+        /></span>
+        <h1 class="brand-title">Medlemsinloggning</h1>
         <p class="inlog-text">
           Logga in med ditt Golf-ID eller epost för att se handicap och
           medlemsförmåner
         </p>
         <form class="inputs">
           <label for="email">e-postadress</label>
-          <input type="email" name="" id="email" placeholder="namn@epost.com" />
+          <input type="email" id="email" placeholder="namn@epost.com" />
           <label for="password">Lösenord</label>
-          <input
-            type="password"
-            name=""
-            id="password"
-            placeholder="Ditt lösenord"
-          />
-          <input type="checkbox" name="" id="" /> Kom ihåg mig på denna enhet
-          <a href="#">Glömt lösenord?</a>
-          <button type="submit">Logga in</button>
-          <div class="alt-login">
-            <div class="divider" role="separator">
-              <span>Eller fortsätt med</span>
-              <button type="button" class="alt-login">
-                <img src="min-golf.svg" alt="" width="24" height="24" />
-                Logga in med Min Golf (SGF)
-              </button>
+          <input type="password" id="password" placeholder="Ditt lösenord" />
+          <div class="flex">
+            <div>
+              <input type="checkbox" id="checkbox" />
+              <label for="checkbox">Kom ihåg mig på denna enhet</label>
             </div>
+            <a href="#">Glömt lösenord?</a>
           </div>
+          <input type="submit" value="LOGGA IN" />
         </form>
+        <section class="alt-login">
+          <div class="divider"><h2>Eller fortsätt med</h2></div>
+          <button type="button" class="alt-login">Logga in med Golf-ID</button>
+          <hr />
+          <p>Inte medlem ännu? <a href="#"> Ansök om medlemsskap här</a></p>
+          <p>Kansliets inloggningssupport: <strong>070-123 45 67</strong></p>
+        </section>
       </div>
     </main>
 
