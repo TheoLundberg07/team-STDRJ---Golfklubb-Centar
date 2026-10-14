@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*======== Global Variables and reset ======*/
+:root {
+  --deep-fairway-green: #1b4d3e;
+  --muted-sage: #8a9a86;
+  --warm-brass: #d4af37;
+  --soft-of-white: #f8f9fa;
+  --charcoal-grey: #212529;
+  --border: #c0c9c3;
+  --border-opacity: #c0c9c366;
+  --title-font: Noto Serif;
+  --body-font: Manrope;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--soft-of-white);
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  color: #212529;
+}
+
+input,
+label,
+button {
+  display: block;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30rem;
+  max-width: 80vw;
+  padding: 2.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--border-opacity);
+  border-radius: 8px;
+}
+
+.container .brand-logo {
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .brand-logo img {
+  z-index: 1000;
+  opacity: 1;
+  height: 100%;
+}
+
+.brand-title {
+  font-family: var(--title-font);
+  color: var(--deep-fairway-green);
+  font-weight: 500;
+  letter-spacing: -0.7px;
+  font-size: 2rem;
+}
+
+.inlog-text {
+  text-align: center;
+  letter-spacing: -0.5px;
+  margin-bottom: 2rem;
+}
+
+form {
+  width: 100%;
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+input {
+  width: 100%;
+  height: 2.8rem;
+  padding: 13px 16px;
+  font-size: 1.2rem;
+  font-weight: 50;
+  border: 2px solid var(--border-opacity);
+  margin-bottom: 1.5rem;
+}
+
+input::placeholder {
+  color: var(--border);
+  font-weight: 100;
+}
+
+input[type="submit"] {
+  background: var(--deep-fairway-green);
+  color: white;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  border-radius: 2px;
+  padding: 14px 24px;
+  height: 48px;
+  border: none;
+  margin: 2rem 0 0.5rem 0;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex div {
+  display: inline;
+}
+
+.flex a {
+  text-align: end;
+}
+
+.flex label {
+  display: inline;
+}
+
+.alt-login {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--border);
+  margin: 1rem 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.divider h2 {
+  font-size: 11px;
+}
+
+button {
+  border: 1px solid var(--border-opacity);
+  background-color: white;
+  display: inline;
+  align-items: center;
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--deep-fairway-green);
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+}
+
+hr {
+  border-color: var(--border-opacity);
+  margin-bottom: 2rem;
+}
+
+.alt-login p {
+  margin-bottom: 0.7rem;
+}
+
+.container a {
+  color: var(--deep-fairway-green);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 448px) {
+  .container {
+    max-width: 100vw;
+    min-width: 316px;
+  }
+}

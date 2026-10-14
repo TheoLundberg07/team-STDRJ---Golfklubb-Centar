@@ -1,11 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content=""
-    />
+    <meta name="description" content="" />
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -35,7 +32,39 @@
     <header class="header" id="header"></header>
 
     <!--==================== MAIN ====================-->
-    <main class="main"></main>
+    <main class="main">
+      <div class="container">
+        <span class="brand-logo"
+          ><img src="./assets/img/GkCLogo.svg" alt="Golfklubb Centar Logga"
+        /></span>
+        <h1 class="brand-title">Medlemsinloggning</h1>
+        <p class="inlog-text">
+          Logga in med ditt Golf-ID eller epost för att se handicap och
+          medlemsförmåner
+        </p>
+        <form class="inputs">
+          <label for="email">e-postadress</label>
+          <input type="email" id="email" placeholder="namn@epost.com" />
+          <label for="password">Lösenord</label>
+          <input type="password" id="password" placeholder="Ditt lösenord" />
+          <div class="flex">
+            <div>
+              <input type="checkbox" id="checkbox" />
+              <label for="checkbox">Kom ihåg mig på denna enhet</label>
+            </div>
+            <a href="#">Glömt lösenord?</a>
+          </div>
+          <input type="submit" value="LOGGA IN" />
+        </form>
+        <section class="alt-login">
+          <div class="divider"><h2>Eller fortsätt med</h2></div>
+          <button type="button" class="alt-login">Logga in med Golf-ID</button>
+          <hr />
+          <p>Inte medlem ännu? <a href="#"> Ansök om medlemsskap här</a></p>
+          <p>Kansliets inloggningssupport: <strong>070-123 45 67</strong></p>
+        </section>
+      </div>
+    </main>
 
     <!--==================== FOOTER ====================-->
     <footer class="footer"></footer>
