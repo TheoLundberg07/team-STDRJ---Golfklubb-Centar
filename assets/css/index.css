@@ -6,8 +6,8 @@
 :root {
   /*========== Colors ==========*/
   --first-color: #1b4d3e;
-  --first-color-alt: #735c00;
   --first-color-light: #8abda9;
+  --first-color-alt: #735c00;
   --title-color: #003629;
   --text-color: #404945;
   --text-color-alt: #181c20;
@@ -376,7 +376,6 @@ footer {
   color: var(--body-color-alt);
 }
 
-
 .footer-links {
   color: var(--body-color-alt);
 }
@@ -437,16 +436,15 @@ footer {
     flex-direction: column;
     gap: 35px;
   }
-  .footer-logo-container{
+  .footer-logo-container {
     flex-wrap: wrap;
   }
-  
 }
-@media (max-width: 1300px){
+@media (max-width: 1300px) {
   .rättigheter-container {
     flex-direction: column;
   }
-  .rättigheter{
+  .rättigheter {
     width: 100%;
   }
   .policy-container {
@@ -456,4 +454,3 @@ footer {
     justify-content: flex-start;
   }
 }
-

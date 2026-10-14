@@ -21,21 +21,113 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/logga-in.css" />
-    <link rel="stylesheet" href="assets/css/header.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
+    <!-- <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" /> -->
 
     <title>Golfklubb</title>
   </head>
 
   <body>
     <!--==================== HEADER & NAV ====================-->
-    <header class="header" id="header"></header>
+    <!--==================== HEADER & NAV ====================-->
+    <header>
+      <nav>
+        <!--==================== DESKTOP NAVMENU ====================-->
+
+        <a class="logo" href=""><img src="assets/img/logo.png" alt="Logo" /></a>
+
+        <ul id="desktop-menu">
+          <li><a class="links active" href="index.html">Hem</a></li>
+          <li><a class="links" href="">Medlemskap</a></li>
+          <li><a class="links" href="">Restaurang</a></li>
+          <li><a class="links" href="">Shop</a></li>
+          <li><a class="links" href="">Om Oss</a></li>
+          <li><a class="links" href="">Kontakt</a></li>
+        </ul>
+        <div class="button-container">
+          <a class="shop-desktop" href="boka-tid.html"
+            ><button class="shop-desktop">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path
+                  d="M7.00488 7.99966V5.99966C7.00488 3.23824 9.24346 0.999664 12.0049 0.999664C14.7663 0.999664 17.0049 3.23824 17.0049 5.99966V7.99966H20.0049C20.5572 7.99966 21.0049 8.44738 21.0049 8.99966V20.9997C21.0049 21.5519 20.5572 21.9997 20.0049 21.9997H4.00488C3.4526 21.9997 3.00488 21.5519 3.00488 20.9997V8.99966C3.00488 8.44738 3.4526 7.99966 4.00488 7.99966H7.00488ZM7.00488 9.99966H5.00488V19.9997H19.0049V9.99966H17.0049V11.9997H15.0049V9.99966H9.00488V11.9997H7.00488V9.99966ZM9.00488 7.99966H15.0049V5.99966C15.0049 4.34281 13.6617 2.99966 12.0049 2.99966C10.348 2.99966 9.00488 4.34281 9.00488 5.99966V7.99966Z"
+                ></path>
+              </svg></button
+          ></a>
+          <a href="logga-in.html"
+            ><button class="logga-in-desktop">Logga in</button></a
+          >
+          <a href="boka-tid.html"
+            ><button class="download-button desktop-download-button">
+              Boka tid
+            </button></a
+          >
+        </div>
+
+        <!-- ========= Mobile Menu ======== -->
+
+        <div class="button-container-mobile">
+          <a class="shop-mobile" href="boka-tid.html"
+            ><button class="shop-mobile">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path
+                  d="M7.00488 7.99966V5.99966C7.00488 3.23824 9.24346 0.999664 12.0049 0.999664C14.7663 0.999664 17.0049 3.23824 17.0049 5.99966V7.99966H20.0049C20.5572 7.99966 21.0049 8.44738 21.0049 8.99966V20.9997C21.0049 21.5519 20.5572 21.9997 20.0049 21.9997H4.00488C3.4526 21.9997 3.00488 21.5519 3.00488 20.9997V8.99966C3.00488 8.44738 3.4526 7.99966 4.00488 7.99966H7.00488ZM7.00488 9.99966H5.00488V19.9997H19.0049V9.99966H17.0049V11.9997H15.0049V9.99966H9.00488V11.9997H7.00488V9.99966ZM9.00488 7.99966H15.0049V5.99966C15.0049 4.34281 13.6617 2.99966 12.0049 2.99966C10.348 2.99966 9.00488 4.34281 9.00488 5.99966V7.99966Z"
+                ></path>
+              </svg></button
+          ></a>
+          <a class="logga-in-mobile" href="logga-in.html"
+            ><button class="logga-in-mobile">Logga in</button></a
+          >
+          <button
+            class="open-menu"
+            commandfor="mobile-menu"
+            command="show-popover"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+          </button>
+        </div>
+        <ul id="mobile-menu" class="mobile-menu" popover>
+          <button
+            class="close-menu"
+            commandfor="mobile-menu"
+            command="hide-popover"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="32"
+              height="32"
+            >
+              <path
+                d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"
+              ></path>
+            </svg>
+          </button>
+          <li><a class="links active" href="index.html">Hem</a></li>
+          <li><a class="links" href="">Internet</a></li>
+          <li><a class="links" href="">Agilt & Scrum</a></li>
+          <li><a class="links" href="">Milsolpar</a></li>
+          <li><a class="links" href="">Källor</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <!--==================== MAIN ====================-->
     <main class="main">
       <div class="container">
         <span class="brand-logo"
-          ><img src="./assets/img/GkCLogo.svg" alt="Golfklubb Centar Logga"
+          ><img src="./assets/img/GkCLogo (1).svg" alt="Golfklubb Centar Logga"
         /></span>
         <h1 class="brand-title">Medlemsinloggning</h1>
         <p class="inlog-text">
@@ -67,6 +159,65 @@
     </main>
 
     <!--==================== FOOTER ====================-->
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="container-top">
+        <div class="container-logo-text">
+          <div class="footer-logo-container">
+            <a class="logo-footer" href=""
+              ><img src="assets/img/Logo-white-inv.png" alt="Logo"
+            /></a>
+            <p><a href="">Centar Sweden</a><strong></strong></p>
+          </div>
+
+          <div class="footer-text">
+            <p>
+              Skandinavisk golfupplevelse i harmoni med naturen. Beläget i
+              Golfdalens <br />
+              historiska kulturlandskap sedan 1984 med 18 mästerskapshål och
+              gästfrihet av högsta klass.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <ul class="footer-links">
+            <li id="utforska">UTFORSKA</li>
+            <li><a href="index.html">Startsida</a></li>
+            <li><a href="om-oss.html">Om Oss</a></li>
+            <li><a href="">Bana</a></li>
+            <li><a href="medlem.html">Medlemskap</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="footer-links">
+            <li id="service">SERVICE & INFO</li>
+            <li><a href="restaurang.html">Restaurang</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="">Tävlingar & Event</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="footer-line" />
+
+      <div class="rättigheter-container">
+        <div class="rättigheter">
+          <p>
+            © 2025 Golfklubb Centar Sweden. Alla rättigheter förbehållna.
+            Skandinavisk golfupplevelse i harmoni med naturen.
+          </p>
+        </div>
+
+        <div class="policy-container">
+          <ul class="policy">
+            <li><a href="">Integritetspolicy</a></li>
+            <li><a href="">Tillgänglighet</a></li>
+            <li><a href="">Kansli Online</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
