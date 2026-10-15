@@ -27,7 +27,7 @@ body {
   line-height: 1.6;
 }
 
-.container {
+main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -94,10 +94,32 @@ body {
   gap: 16px;
 }
 
-.card-icom {
+.card-heading {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.card-heading .card-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  padding: 0;
+}
+
+.card-icon {
   font-size: 1.2rem;
+  width: fit-content;
   color: var(--deep-fairway-green);
-  padding-top: 2px;
+  background-color: color-mix(in srgb, var(--muted-sage) 40%, transparent);
+  padding: 2px;
+}
+
+.card-icon i {
+  font-size: 2rem;
+  height: 100%;
 }
 
 .card-content h2 {
@@ -257,7 +279,7 @@ body {
 .form-label {
   display: flex;
   align-items: center;
-  gap: 8px; 
+  gap: 8px;
   margin-bottom: 6px;
   font-size: 0.85rem;
   font-weight: 600;
@@ -539,6 +561,11 @@ footer p {
 /* Smooth Scroll for Anchor Links */
 html {
   scroll-behavior: smooth;
+}
+
+form button {
+  background-color: var(--deep-fairway-green);
+  color: var(--soft-off-white);
 }
 
 /* Accessibility Enhancements */
