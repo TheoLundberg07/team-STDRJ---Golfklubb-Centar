@@ -146,7 +146,7 @@ img {
 
 .hero-container {
   background-color: var(--body-color-alt);
-  padding: 100px 10px;
+  padding: 100px 30px;
   display: flex;
   justify-content: center;
 }
@@ -165,13 +165,13 @@ img {
   flex-direction: column;
 }
 
-.hero-tag{
+.hero-tag {
   display: flex;
-  
+
   justify-content: flex-start;
 }
 
-.hero-tag p{
+.hero-tag p {
   background-color: var(--secondary-color-light);
   text-align: center;
   padding: 6px 15px;
@@ -181,8 +181,6 @@ img {
   font-weight: var(--font-regular);
   box-shadow: 2px 2px 5px rgba(64, 64, 64, 0.214);
 }
-
-
 
 .hero-text h1 {
   font-size: var(--text-5xl);
@@ -244,6 +242,10 @@ img {
 }
 
 @media (max-width: 900px) {
+  .hero-container {
+    padding: 100px 10px;
+  }
+
   .hero-section {
     display: flex;
     flex-direction: column;
@@ -252,14 +254,19 @@ img {
   .hero-img img {
     margin-top: 50px;
   }
-  
+  .upplev-container {
+    background-color: var(--body-color);
+    padding: 50px 30px 50px 30px;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /*=============== Upplev Section ===============*/
 
 .upplev-container {
   background-color: var(--body-color);
-  padding: 50px 10px 50px 10px;
+  padding: 100px 30px;
   display: flex;
   justify-content: center;
 }
@@ -298,6 +305,7 @@ img {
   background-color: var(--body-color-alt);
   border-radius: 4px;
   box-shadow: 3px 3px 15px #5b5b5b32;
+  border-radius: 4px;
 }
 .card img {
   height: 230px;
@@ -324,11 +332,17 @@ img {
   translate: 5px 0;
 }
 
+@media (max-width: 900px) {
+  .upplev-container {
+    padding: 50px 10px;
+  }
+}
+
 /* =============== Medlemskap =============== */
 
 .medlemskap-hem {
   background-color: var(--body-color-alt);
-  padding: 50px 10px 50px 10px;
+  padding: 100px 30px;
   display: flex;
   justify-content: center;
 }
@@ -360,6 +374,12 @@ img {
   gap: 5px;
   padding: 15px 0 0 0;
 }
+
+.medlemskap-hem-text ul i {
+  color: var(--first-color);
+  font-size: 22px;
+}
+
 .Ansök-om-medlemskap {
   display: flex;
   align-items: center;
@@ -396,6 +416,10 @@ img {
 }
 
 @media (max-width: 900px) {
+  .medlemskap-hem {
+    padding: 50px 10px;
+  }
+
   .medlemskap-hem-container {
     display: flex;
     flex-direction: column;
@@ -408,29 +432,73 @@ img {
   }
 }
 
+/* =============== Senaste Nytt ================ */
+
+.senaste-nytt {
+  padding: 100px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.senaste-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.senaste-header-link{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.senaste-head a{
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+  transition: 200ms ease-in-out;
+}
+.senaste-head a:hover{
+  color: var(--first-color);
+  translate: 5px 0;
+}
+
+.card-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.card-text {
+  background-color: var(--body-color-alt);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+  border-radius: 4px;
+}
 
 
-.section-tag{
+.card-text a {
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+  transition: 200ms ease-in-out;
+}
+.card-text a:hover {
+  color: var(--first-color);
+  translate: 5px 0;
+}
+@media (max-width: 900px) {
+  .senaste-nytt {
+    padding: 100px 10px;
+  }
+}
+
+.section-tag {
   font-size: var(--text-sm);
   font-weight: var(--font-regular);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-main {
-  height: 600vh;
-}
