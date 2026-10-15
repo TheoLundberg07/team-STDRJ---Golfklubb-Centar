@@ -520,6 +520,12 @@ hr {
   font-weight: bold;
 }
 
+@media (max-width: 390px) {
+  .brand-title {
+    font-size: var(--h1-font-size);
+  }
+}
+
 /*=============== FOOTER ===============*/
 
 footer {

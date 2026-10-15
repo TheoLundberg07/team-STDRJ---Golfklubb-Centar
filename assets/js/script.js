@@ -14,5 +14,5 @@ async function loadComponent(id, file) {
 }
 
 loadComponent("header", "/components/header.html");
-loadComponent("footer", "/components/nyhetsbrev.html");
+loadComponent("newsletter", "/components/nyhetsbrev.html");
 loadComponent("footer", "/components/footer.html");

@@ -105,21 +105,70 @@ img {
   text-align: center;
   display: block;
   background-color: var(--newsletter-color);
+  padding: 2rem;
+  color: var(--text-color-alt);
 }
 
 .newsletter strong {
   text-transform: uppercase;
   color: var(--first-color-alt);
+  font-weight: var(--font-semi-bold);
 }
 
 .newsletter form {
-  display: inline;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.newsletter form input {
+  box-sizing: border-box;
+  height: 2.8rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  border: 0;
+  border-radius: 0;
+  min-width: fit-content;
 }
 
 .newsletter form input[type="email"] {
   background-color: var(--body-color);
+  min-width: fit-content;
+  max-width: 20%;
 }
 
 .newsletter form input[type="submit"] {
   background-color: var(--first-color);
+  color: var(--body-text-color);
+  margin: 0;
+  padding: 0 1rem;
+  border-radius: 2px;
+  max-width: 15%;
+}
+
+@media (min-width: 848px) {
+  .newsletter p {
+    max-width: 70%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: min(90%, 400px);
+    margin: 2rem auto;
+  }
+
+  .newsletter form input[type="email"],
+  .newsletter form input[type="submit"] {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
 }
