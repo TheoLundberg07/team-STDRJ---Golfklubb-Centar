@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*======== VARIABLES CSS ======*/
+:root {
+  /*======== Colors =======*/
+  --first-color: #1b4d3e;
+  --first-color-light: #8abda9;
+  --first-color-alt: #735c00;
+  --first-color-alt-light: #cba72f;
+  --title-color: #003629;
+  --text-color: #404945;
+  --text-color-alt: #151c20;
+  --body-text-color: #f7f9ff;
+  --border: #c0c9c399;
+
+  --body-color: #fff;
+  --body-color-alt: #f7f9ff;
+
+  /*========= Font and typography =======*/
+  --noto-font-family: "Noto Serif", serif;
+  --manrope-font-family: "Manrope", sans-serif;
+
+  --biggest-font-size: 2rem;
+  --bigger-font-size: 1.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (width >= 1150px) {
+  :root {
+    --biggest-font-size: 3.5rem;
+    --bigger-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+button {
+  font-family: var(--manrope-font-family);
+}
+
+body {
+  background-color: var(--body-color-alt);
+  color: var(--text-color);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-family: var(--noto-font-family);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  z-index: 9;
+}
+
+/* ========== MEMBER PAGE ========== */
+.hero {
+  margin: 4rem;
+}
+
+.hero-text {
+  text-align: center;
+  max-width: 60%;
+  margin: 1rem auto;
+}
+
+.hero-text * {
+  margin-bottom: 1rem;
+}
+
+p.season {
+  display: list-item;
+  background-color: color-mix(
+    in srgb,
+    var(--first-color-light) 50%,
+    transparent
+  );
+  border: 1px solid var(--first-color-light);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  list-style-type: disc;
+  list-style-position: inside;
+  max-width: fit-content;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  padding: 0 0.5rem;
+}
+
+p.season::marker {
+  color: var(--first-color-alt-light);
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  margin: 2rem auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--border);
+  padding-left: 0.5rem;
+}
