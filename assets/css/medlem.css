@@ -16,6 +16,7 @@
 
   --body-color: #fff;
   --body-color-alt: #f7f9ff;
+  --section-color: #f1f4f9;
 
   /*========= Font and typography =======*/
   --noto-font-family: "Noto Serif", serif;
@@ -66,7 +67,7 @@ button {
 }
 
 body {
-  background-color: var(--body-color-alt);
+  background-color: var(--body-color-alt) !important;
   color: var(--text-color);
 }
 
@@ -142,7 +143,7 @@ p.season::marker {
   grid-template-columns: repeat(4, 1fr);
   width: 80%;
   margin: 2rem auto;
-  padding-top: 1rem;
+  padding: 1rem 0;
   border-top: 1px solid var(--border);
 }
 
@@ -151,4 +152,132 @@ p.season::marker {
   flex-direction: column;
   border-left: 1px solid var(--border);
   padding-left: 0.5rem;
+}
+
+.memberships {
+  padding: 2rem;
+}
+
+.membership-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.membership-heading .title {
+  width: 60%;
+}
+
+.membership-heading p {
+  width: 40%;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 2rem;
+  row-gap: 0;
+}
+
+.card {
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  row-gap: 1rem;
+  align-content: stretch;
+  background-color: var(--body-color);
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.card-row {
+  margin: 0;
+}
+
+.heading-row {
+  margin-top: 0;
+}
+
+.card .horizontal-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card p strong {
+  text-transform: uppercase;
+  font-size: var(--small-font-size);
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+  color: var(--title-color);
+}
+
+.card hr {
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+.card h4 {
+  color: var(--text-color);
+}
+
+.price {
+  font-size: var(--biggest-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+p.requirement {
+  font-weight: var(--font-regular);
+}
+
+.card ul {
+  padding-left: 1.5rem;
+}
+
+.card li {
+  list-style-position: outside;
+  list-style-image: url('data:image/svg+xml,<svg xmlns= "http://www.w3.org/2000/svg" viewBox= "0 0 24 24" fill= "rgba(0,54,41,1)" ><path d= "M4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12ZM12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM17.4571 9.45711L16.0429 8.04289L11 13.0858L8.20711 10.2929L6.79289 11.7071L11 15.9142L17.4571 9.45711Z" ></path></svg>');
+}
+
+.card1 li {
+  list-style-image: url('data:image/svg+xml,<svg xmlns= "http://www.w3.org/2000/svg" viewBox= "0 0 24 24" fill= "rgba(205,167,0,1)" ><path d= "M4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12ZM12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM17.4571 9.45711L16.0429 8.04289L11 13.0858L8.20711 10.2929L6.79289 11.7071L11 15.9142L17.4571 9.45711Z" ></path></svg>');
+}
+
+.card li::marker {
+  font-size: 2em;
+}
+
+li strong {
+  font-weight: bold;
+}
+
+.card button {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--title-color);
+  border-radius: 2px;
+  background-color: var(--body-color);
+  font-size: var(--small-font-size);
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+.card a {
+  color: var(--text-color);
+}
+
+.card1 button {
+  background-color: var(--first-color);
+  border: none;
+}
+
+.card1 a {
+  color: var(--body-text-color);
 }
