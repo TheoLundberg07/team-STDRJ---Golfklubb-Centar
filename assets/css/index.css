@@ -180,6 +180,7 @@ img {
   font-size: var(--text-sm);
   font-weight: var(--font-regular);
   box-shadow: 2px 2px 5px rgba(64, 64, 64, 0.214);
+  word-spacing: 2px;
 }
 
 .hero-text h1 {
@@ -194,7 +195,6 @@ img {
 
 .hero-button-container {
   display: flex;
-  /* padding-top: 8px; */
   align-items: center;
   gap: 16px;
   padding: 25px 0 0 0;
@@ -442,25 +442,14 @@ img {
   gap: 40px;
 }
 
-.senaste-head {
+.senaste-nytt-container{
   display: flex;
-  justify-content: space-between;
-}
-
-.senaste-header-link{
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.senaste-head a{
-  font-weight: var(--font-medium);
-  color: var(--text-color);
-  transition: 200ms ease-in-out;
-}
-.senaste-head a:hover{
-  color: var(--first-color);
-  translate: 5px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  max-width: 2000px;
+  gap: 50px;
 }
 
 .card-container {
@@ -478,8 +467,14 @@ img {
   gap: 15px;
   padding: 30px;
   border-radius: 4px;
+  box-shadow: 3px 3px 15px #5b5b5b32;
 }
 
+.senaste-head{
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
 
 .card-text a {
   font-weight: var(--font-medium);
@@ -490,9 +485,16 @@ img {
   color: var(--first-color);
   translate: 5px 0;
 }
+
 @media (max-width: 900px) {
   .senaste-nytt {
     padding: 100px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .senaste-header-link {
+    display: none;
   }
 }
 
