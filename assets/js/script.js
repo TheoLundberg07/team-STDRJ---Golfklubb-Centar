@@ -13,6 +13,6 @@ async function loadComponent(id, file) {
   }
 }
 
-loadComponent("header", "/components/header.html");
-loadComponent("newsletter", "/components/nyhetsbrev.html");
-loadComponent("footer", "/components/footer.html");
+loadComponent("header", "./components/header.html");
+loadComponent("newsletter", "./components/nyhetsbrev.html");
+loadComponent("footer", "./components/footer.html");
