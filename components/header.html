@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="../assets/css/header.css" />
+  </head>
+
+  <body>
+    <nav id="header">
+      <!--==================== DESKTOP NAVMENU ====================-->
+
+      <a class="logo" href=""
+        ><img src="../assets/img/logo.png" alt="Logo"
+      /></a>
+
+      <ul id="desktop-menu">
+        <li><a class="links active" href="index.html">Hem</a></li>
+        <li><a class="links" href="../medlem.html">Medlemskap</a></li>
+        <li><a class="links" href="../restaurang.html">Restaurang</a></li>
+        <li><a class="links" href="../shop.html">Shop</a></li>
+        <li><a class="links" href="../om-oss.html">Om Oss</a></li>
+        <li><a class="links" href="../kontakt.html">Kontakt</a></li>
+      </ul>
+      <div class="button-container">
+        <a class="shop-desktop" href="../shop.html"
+          ><button class="shop-desktop">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path
+                d="M7.00488 7.99966V5.99966C7.00488 3.23824 9.24346 0.999664 12.0049 0.999664C14.7663 0.999664 17.0049 3.23824 17.0049 5.99966V7.99966H20.0049C20.5572 7.99966 21.0049 8.44738 21.0049 8.99966V20.9997C21.0049 21.5519 20.5572 21.9997 20.0049 21.9997H4.00488C3.4526 21.9997 3.00488 21.5519 3.00488 20.9997V8.99966C3.00488 8.44738 3.4526 7.99966 4.00488 7.99966H7.00488ZM7.00488 9.99966H5.00488V19.9997H19.0049V9.99966H17.0049V11.9997H15.0049V9.99966H9.00488V11.9997H7.00488V9.99966ZM9.00488 7.99966H15.0049V5.99966C15.0049 4.34281 13.6617 2.99966 12.0049 2.99966C10.348 2.99966 9.00488 4.34281 9.00488 5.99966V7.99966Z"
+              ></path>
+            </svg></button
+        ></a>
+        <a href="../logga-in.html"
+          ><button class="logga-in-desktop">Logga in</button></a
+        >
+        <a href="../boka-tid.html"
+          ><button class="download-button desktop-boka-button">
+            Boka tid
+          </button></a
+        >
+      </div>
+
+      <!-- ========= Mobile Menu ======== -->
+
+      <div class="button-container-mobile">
+        <a class="shop-mobile" href="../shop.html"
+          ><button class="shop-mobile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path
+                d="M7.00488 7.99966V5.99966C7.00488 3.23824 9.24346 0.999664 12.0049 0.999664C14.7663 0.999664 17.0049 3.23824 17.0049 5.99966V7.99966H20.0049C20.5572 7.99966 21.0049 8.44738 21.0049 8.99966V20.9997C21.0049 21.5519 20.5572 21.9997 20.0049 21.9997H4.00488C3.4526 21.9997 3.00488 21.5519 3.00488 20.9997V8.99966C3.00488 8.44738 3.4526 7.99966 4.00488 7.99966H7.00488ZM7.00488 9.99966H5.00488V19.9997H19.0049V9.99966H17.0049V11.9997H15.0049V9.99966H9.00488V11.9997H7.00488V9.99966ZM9.00488 7.99966H15.0049V5.99966C15.0049 4.34281 13.6617 2.99966 12.0049 2.99966C10.348 2.99966 9.00488 4.34281 9.00488 5.99966V7.99966Z"
+              ></path>
+            </svg></button
+        ></a>
+        <a class="logga-in-mobile" href="../logga-in.html"
+          ><button class="logga-in-mobile">Logga in</button></a
+        >
+        <button
+          class="open-menu"
+          commandfor="mobile-menu"
+          command="show-popover"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+          </svg>
+        </button>
+      </div>
+      <ul id="mobile-menu" class="mobile-menu" popover>
+        <button
+          class="close-menu"
+          commandfor="mobile-menu"
+          command="hide-popover"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"
+            ></path>
+          </svg>
+        </button>
+        <li><a class="links active" href="index.html">Hem</a></li>
+        <li><a class="links" href="">Internet</a></li>
+        <li><a class="links" href="">Agilt & Scrum</a></li>
+        <li><a class="links" href="">Milsolpar</a></li>
+        <li><a class="links" href="">Källor</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,598 @@
+/* KontaktOss.css */
+:root {
+  --deep-fairway-green: #1b4d3e;
+  --muted-sage: #8a9a86;
+  --warm-brass: #d4af37;
+  --soft-off-white: #f8f9fa;
+  --charcoal-grey: #212529;
+  --border-color: #e5e7eb;
+  --text-muted: #6b7280;
+  --font-heading: "Georgia", "Times New Roman", serif;
+  --font-body:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #fafafa;
+  color: var(--charcoal-grey);
+  line-height: 1.6;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Sub-lables */
+.sub-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5em;
+  color: var(--muted-sage);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Section Header */
+.section-header {
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+
+.section-header h1 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--deep-fairway-green);
+  margin-bottom: 12px;
+  font-weight: normal;
+}
+
+.section-header p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 700px;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 40px 0 60px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 380px 1fr;
+  }
+}
+
+/* Kort och paneler */
+.card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-heading {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.card-heading .card-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  padding: 0;
+}
+
+.card-icon {
+  font-size: 1.2rem;
+  width: fit-content;
+  color: var(--deep-fairway-green);
+  background-color: color-mix(in srgb, var(--muted-sage) 40%, transparent);
+  padding: 2px;
+}
+
+.card-icon i {
+  font-size: 2rem;
+  height: 100%;
+}
+
+.card-content h2 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--deep-fairway-green);
+  margin-bottom: 12px;
+  font-weight: normal;
+}
+
+/* Kontakt-länkar (Klickbara på mobil och desktop) */
+.contact-item {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.contact-item i {
+  width: 20px;
+  color: var(--muted-sage);
+}
+
+.contact-item a {
+  color: var(--deep-fairway-green);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 600;
+}
+
+.contact-item a:hover {
+  color: var(--warm-brass);
+  text-decoration: underline;
+}
+
+/* Öppettider Sektion */
+.oppening-hour {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-color);
+}
+
+.oppening-hour h3 {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  margin-bottom: 4px;
+}
+
+/* Sub-label (liten text ovanför rubriken) */
+.sub-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted, #777777);
+  margin-bottom: 4px;
+}
+
+/* Beskrivningstext */
+.description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-muted, #555555);
+  margin-bottom: 12px;
+}
+
+/* Kontaktlänk med ikon */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.contact-item i {
+  color: var(--deep-fairway-green, #1b4d3e);
+}
+
+.contact-item a {
+  color: var(--deep-fairway-green, #1b4d3e);
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Adress och Infoboxar */
+.address-box {
+  font-style: normal;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.info-box {
+  background-color: var(--soft-off-white);
+  border-left: 4px solid var(--warm-brass);
+  padding: 14px;
+  border-radius: 6px;
+  margin-top: 12px;
+  font-size: 0.85rem;
+}
+
+.info-box h4 {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  color: var(--deep-fairway-green);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.info-box p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Form Styles */
+.form-card {
+  display: block;
+  padding: 36px;
+  background-color: #ffffff;
+}
+
+.form-card h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--deep-fairway-green);
+  margin-bottom: 6px;
+  font-weight: normal;
+}
+
+.form-intro {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.form-label i {
+  font-size: 1rem;
+  color: var(--deep-fairway-green, #1b4d3e);
+}
+
+@media (min-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  color: var(--charcoal-grey);
+  margin-bottom: 6px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  background-color: #fafafa;
+  color: var(--charcoal-grey);
+  transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--deep-fairway-green);
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(27, 77, 62, 0.1);
+}
+
+.gdpr-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.btn-submit {
+  background-color: var(--deep-fairway-green);
+  color: #ffffff;
+  padding: 12px 24px;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-submit:hover {
+  background-color: #13382d;
+}
+
+.form-footer {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--border-color);
+}
+
+/* Karta & Vägbeskrivning */
+.map-section {
+  padding: 40px 0 80px;
+}
+
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.map-header h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--deep-fairway-green);
+  font-weight: normal;
+}
+
+.external-map-link {
+  font-size: 0.9rem;
+  color: var(--deep-fairway-green);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.external-map-link:hover {
+  text-decoration: underline;
+}
+
+/* Map Canvas Container */
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #d1ded7; /* Fallback om bilden inte laddas */
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.map-image:hover {
+  filter: grayscale(0%) contrast(100%);
+}
+
+/* Map Overlay Badge */
+
+.map-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 320px;
+  padding: 16px 20px;
+  z-index: 2;
+}
+
+.badge-icon {
+  background: var(--soft-off-white);
+  color: var(--deep-fairway-green);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.badge-info h3 {
+  font-size: 0.95rem;
+  color: var(--deep-fairway-green);
+}
+
+.badge-info p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--deep-fairway-green);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.status-indicator .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981; /* Grön indikator */
+  border-radius: 50%;
+}
+
+.gps-coordinates {
+  display: block;
+  font-size: 0.7rem;
+  color: #9ca3af; /* Ljusgrå färg för GPS-koordinater */
+  margin-top: 2px;
+}
+
+/* Navigera direkt-knapp */
+
+.btn-navigate {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  color: var(--charcoal-grey);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  gap: 8px;
+  z-index: 2;
+}
+
+.btn-navigate:hover {
+  background-color: var(--deep-fairway-green);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--deep-fairway-green);
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .map-badge {
+    max-width: 90%;
+    padding: 12px 16px;
+  }
+
+  .btn-navigate {
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 16px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Additional Enhancements */
+.card-content h2 {
+  transition: color 0.2s;
+}
+
+.card-content h2:hover {
+  color: var(--warm-brass);
+}
+
+/* Smooth Scroll for Anchor Links */
+html {
+  scroll-behavior: smooth;
+}
+
+form button {
+  background-color: var(--deep-fairway-green);
+  color: var(--soft-off-white);
+}
+
+/* Accessibility Enhancements */
+a:focus,
+button:focus {
+  outline: 2px solid var(--warm-brass);
+  outline-offset: 2px;
+}
+
+/* Mobilanpassningar för kontaktformulär */
+@media (max-width: 640px) {
+  map-wrapper {
+    height: 380px;
+  }
+
+  .map-badge {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 12px 16px;
+    max-width: none;
+  }
+
+  .btn-navigate {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 16px;
+    font-size: 0.75rem;
+  }
+}
