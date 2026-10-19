@@ -207,9 +207,10 @@ p.season::marker {
   align-items: center;
 }
 
-.card p strong {
+p strong {
   text-transform: uppercase;
   font-size: var(--small-font-size);
+  color: var(--first-color-alt);
 }
 
 .card h3 {
@@ -318,4 +319,15 @@ main p {
 .benefits td {
   text-align: left;
   vertical-align: top;
+}
+
+@media (max-width: 950px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .card {
+    margin-bottom: 2rem;
+  }
 }

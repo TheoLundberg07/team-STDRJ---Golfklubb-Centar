@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golfklubb</title>
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="assets/img/Logo-white.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/event-&-tävling.css" />
+  </head>
+
+  <body>
+    <!--==================== HEADER & NAV ====================-->
+    <header id="header"></header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--* =========== Event Times ========== -->
+
+      <article class="event-wraper">
+        <section class="event-head">
+          <p class="event-tag">
+            <strong>SÄSONGEN 2026 · GOLFKLUBB CENTAR</strong>
+          </p>
+
+          <h1>Tävlingar & Evenemang</h1>
+
+          <p>
+            Planera din tävlingssäsong på Golfklubb Centar. Se kommande
+            tävlingar, anmäl dig smidigt och följ klubbens resultat.
+          </p>
+        </section>
+
+        <section class="event-time-container">
+          <div class="event-time">
+            <div class="event-time-head">
+              <p class="event-time-tag"><b>10 MAJ · LÖRDAG</b></p>
+              <h3>Vårscramble 2-manna</h3>
+              <p>
+                Kanonstart kl 09:30 · Klass: A & B · 250 kr (Medlem) / 450 kr
+                (Gäst)
+              </p>
+            </div>
+
+            <div class="event-time-button">
+              <a href=""><button>Anmäl dig</button></a>
+            </div>
+          </div>
+
+          <div class="event-time">
+            <div class="event-time-head">
+              <p class="event-time-tag"><b>20 MAJ · TISDAG</b></p>
+              <h3>Tisdagsgolfen Omgång 4 - Slaggolf</h3>
+              <p>Löpande start 14:00–17:30 · Klass: A, B & C · 100 kr</p>
+            </div>
+
+            <div class="event-time-button">
+              <a href=""><button>Anmäl dig</button></a>
+            </div>
+          </div>
+
+          <div class="event-time">
+            <div class="event-time-head">
+              <p class="event-time-tag"><b>19 JUNI · TORSDAG</b></p>
+              <h3>Midsommarslaget - Greensome</h3>
+              <p>
+                Greensome Poängbogey · Gemensam middag kl 19:00 · 350 kr inkl.
+                buffé
+              </p>
+            </div>
+
+            <div class="event-time-button">
+              <a href=""><button>Anmäl dig</button></a>
+            </div>
+          </div>
+
+          <div class="event-time">
+            <div class="event-time-head">
+              <p class="event-time-tag"><b>16–17 AUG · HELG</b></p>
+              <h3>Klubbmästerskap (KM) - 54 hål Scratch</h3>
+              <p>
+                Slagspel utan hcp · Cut efter 36 hål · Herr, Dam & Junior · 300
+                kr
+              </p>
+            </div>
+
+            <div class="event-time-button">
+              <a href=""><button>Anmäl dig</button></a>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <!--* =========== Event Form ========== -->
+
+      <article class="form-container">
+        <section class="form-head">
+          <p class="event-tag">
+            <strong>DIREKTANMÄLAN</strong>
+          </p>
+
+          <h2>Anmäl dig till tävling</h2>
+
+          <p>
+            Ange ditt Golf-ID så hämtar vi automatiskt aktuellt handicap och
+            klubbtillhörighet inför startlistan.
+          </p>
+        </section>
+
+        <form class="form" action="/submit-form" method="post">
+          <div class="form-section">
+            <label for="Tävling-event">Tävling / Event *</label>
+            <select name="Tävling-event" id="Tävling-event" required>
+              <option value="" disabled selected>Välj</option>
+              <option value="1">Vårscramble 2-manna</option>
+              <option value="2">Tisdagsgolfen Omgång 4 - Slaggolf</option>
+              <option value="3">Midsommarslaget - Greensome</option>
+              <option value="4">Klubbmästerskap (KM) - 54 hål Scratch</option>
+            </select>
+          </div>
+
+          <div class="form-section">
+            <label for="Golf-ID">Golf-ID / Personnummer*</label>
+            <input
+              type="text"
+              id="Golf-ID"
+              name="Golf-ID"
+              placeholder="ÅÅMMDD-XXXX / (#XXXX)"
+              required
+            />
+          </div>
+
+          <div class="form-section">
+            <label for="E-POSTADRESS">E-POSTADRESS *</label>
+            <input
+              type="email"
+              id="E-POSTADRESS"
+              name="E-POSTADRESS"
+              placeholder="namn@epost.com"
+              required
+            />
+          </div>
+
+          <button type="submit">SKICKA ANMÄLAN</button>
+
+          <p class="vilkor">
+            Du kan även anmäla dig direkt via Min Golf (SGF). Bekräftelse
+            skickas via e-post.
+          </p>
+        </form>
+      </article>
+
+      <!--* =========== Leaderboard / Resultattabell ========== -->
+
+      <section class="leaderboard-container">
+        <div class="leaderboard">
+          <table class="leaderboard-table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">SPELARE</th>
+                <th scope="col">KLUBB</th>
+                <th scope="col">HCP</th>
+                <th scope="col">NETTO</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="leaderboard-winner">
+                <td>1</td>
+                <td>Gustav Eklund</td>
+                <td>Golfklubb Centar</td>
+                <td>2.4</td>
+                <td>68</td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>Helena Berggren</td>
+                <td>Golfklubb Centar</td>
+                <td>5.8</td>
+                <td>69</td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Marcus Wallin</td>
+                <td>Halmstad GK (Gäst)</td>
+                <td>4.1</td>
+                <td>70</td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>Fredrik Sjöholm</td>
+                <td>Golfklubb Centar</td>
+                <td>7.2</td>
+                <td>71</td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>Sofia Almén</td>
+                <td>Falkenberg GK (Gäst)</td>
+                <td>8.0</td>
+                <td>72</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== NEWSLETTER ====================-->
+    <section id="newsletter" class="newsletter"></section>
+
+    <!--==================== FOOTER ====================-->
+    <footer id="footer" class="footer"></footer>
+
+    <!--=============== Javascript ===============-->
+    <script src="./assets/js/script.js" defer></script>
+  </body>
+</html>
