@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content=""
-    />
+    <meta name="description" content="" />
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -23,388 +20,258 @@
     />
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/om-oss.css">
-    <link rel="stylesheet" href="assets/css/nyhetsbrev.css">
-    
+    <link rel="stylesheet" href="assets/css/om-oss.css" />
+    <link rel="stylesheet" href="assets/css/nyhetsbrev.css" />
 
     <title>Golfklubb</title>
   </head>
 
   <body>
     <!--==================== HEADER & NAV ====================-->
-    <header>
-      <nav>
-        <!--==================== DESKTOP NAVMENU ====================-->
-
-        <a class="logo" href=""><img src="assets/img/logo.png" alt="Logo" /></a>
-
-        <ul id="desktop-menu">
-          <li><a class="links active" href="index.html">Hem</a></li>
-          <li><a class="links" href="">Medlemskap</a></li>
-          <li><a class="links" href="">Restaurang</a></li>
-          <li><a class="links" href="">Shop</a></li>
-          <li><a class="links" href="om-oss.html">Om Oss</a></li>
-          <li><a class="links" href="">Kontakt</a></li>
-        </ul>
-        <div class="button-container">
-          <a class="shop-desktop" href="boka-tid.html"
-            ><button class="shop-desktop">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-              >
-                <path
-                  d="M7.00488 7.99966V5.99966C7.00488 3.23824 9.24346 0.999664 12.0049 0.999664C14.7663 0.999664 17.0049 3.23824 17.0049 5.99966V7.99966H20.0049C20.5572 7.99966 21.0049 8.44738 21.0049 8.99966V20.9997C21.0049 21.5519 20.5572 21.9997 20.0049 21.9997H4.00488C3.4526 21.9997 3.00488 21.5519 3.00488 20.9997V8.99966C3.00488 8.44738 3.4526 7.99966 4.00488 7.99966H7.00488ZM7.00488 9.99966H5.00488V19.9997H19.0049V9.99966H17.0049V11.9997H15.0049V9.99966H9.00488V11.9997H7.00488V9.99966ZM9.00488 7.99966H15.0049V5.99966C15.0049 4.34281 13.6617 2.99966 12.0049 2.99966C10.348 2.99966 9.00488 4.34281 9.00488 5.99966V7.99966Z"
-                ></path>
-              </svg></button
-          ></a>
-          <a href="logga-in.html"
-            ><button class="logga-in-desktop">Logga in</button></a
-          >
-          <a href="boka-tid.html"
-            ><button class="download-button desktop-download-button">
-              Boka tid
-            </button></a
-          >
-        </div>
-
-        <!-- ========= Mobile Menu ======== -->
-
-        <div class="button-container-mobile">
-          <a class="shop-mobile" href="boka-tid.html"
-            ><button class="shop-mobile">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="24"
-                height="24"
-              >
-                <path
-                  d="M7.00488 7.99966V5.99966C7.00488 3.23824 9.24346 0.999664 12.0049 0.999664C14.7663 0.999664 17.0049 3.23824 17.0049 5.99966V7.99966H20.0049C20.5572 7.99966 21.0049 8.44738 21.0049 8.99966V20.9997C21.0049 21.5519 20.5572 21.9997 20.0049 21.9997H4.00488C3.4526 21.9997 3.00488 21.5519 3.00488 20.9997V8.99966C3.00488 8.44738 3.4526 7.99966 4.00488 7.99966H7.00488ZM7.00488 9.99966H5.00488V19.9997H19.0049V9.99966H17.0049V11.9997H15.0049V9.99966H9.00488V11.9997H7.00488V9.99966ZM9.00488 7.99966H15.0049V5.99966C15.0049 4.34281 13.6617 2.99966 12.0049 2.99966C10.348 2.99966 9.00488 4.34281 9.00488 5.99966V7.99966Z"
-                ></path>
-              </svg></button
-          ></a>
-          <a class="logga-in-mobile" href="logga-in.html"
-            ><button class="logga-in-mobile">Logga in</button></a
-          >
-          <button
-            class="open-menu"
-            commandfor="mobile-menu"
-            command="show-popover"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
-            </svg>
-          </button>
-        </div>
-        <ul id="mobile-menu" class="mobile-menu" popover>
-          <button
-            class="close-menu"
-            commandfor="mobile-menu"
-            command="hide-popover"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="32"
-              height="32"
-            >
-              <path
-                d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"
-              ></path>
-            </svg>
-          </button>
-          <li><a class="links active" href="index.html">Hem</a></li>
-          <li><a class="links" href="">Internet</a></li>
-          <li><a class="links" href="">Agilt & Scrum</a></li>
-          <li><a class="links" href="">Milsolpar</a></li>
-          <li><a class="links" href="">Källor</a></li>
-        </ul>
-      </nav>
-    </header>
+    <header id="header"></header>
 
     <!--==================== MAIN ====================-->
-<main class="main">
-    <section class="om-gulfklubb-centar">
-     <ul>
-        <li><small>VÅR IDENTITET & ARV</small></li>
-      </ul>
-     <h1>Om Golfklubb Centar</h1>
-     <p>Inbäddad i det tidlösa mellansvenska kulturlandskapet förenar Golfklubb Centar Sweden orörd skandinavisk natur med kompromisslös mästerskapskvalitet. Här möts stillsam avkoppling och ren golfpassion på rättvisa villkor.</p>
-  <div>
-     <div class="image-cuntainer">
-     <img src="assets/img/pic1.jpg" alt="pic1">
-     </div>
-     <div class="image-text">
-      <small>HÅL 7 - SKOGGSGLÄNTAN</small>
-      <h2>En hyllning till det skandinaviska landskapet </h2>
-     </div>
-  </div>
-    </section>
-  <section class="historia-vision">
-    <div class="page-container history-grid">
-     <div class="grundat-1994">
-        <small>GRUNDAT 1994</small>
-        <h2>Vår Historia & Vision</h2>
-        <p>I tre decennier har vi förvaltat marken med vördnad för det omgivande landskapet, där varje fairway skapats för att följa naturens naturliga konturer.</p>
-        <div class="år-30">
-        <h3>30 ÅR</h3>
-        <p>Av kontinuerlig banskötsel, mästerskapsarrangemang och skandinavisk klubbgemenskap i harmonisk samklang.</p>
-      </div>
-     </div>
-     <div class="Tidiga-Rötter">
-          <img src="assets/img/Tidiga Rötter.png" alt="tidiga rätter.png">
-          <h3>Tidiga Rötter</h3> 
-          <p>Golfklubb Centar etablerades sommaren 1994 av en samling passionerade golfspelare och banariktekter med en tydlig idè: att bygga en bana som inte tvingar fram artificiella hinder, utan låter terrängen, rullande ¨sar och tallhedar diktera spelets strategi.</p>
-     </div>
-     <div class="Framtidsvisionen">
-          <img src="assets/img/Framtidsvisionen.png" alt="Framtidsvisionen.png">
-          <h3>Framtidsvisionen</h3> 
-          <p>Vår vision är att erbjuda en av Nordens främsta golfmiljöer genom lågamäld elegans, hög tillgänglighet och respekt för den biologisk mångfalden. Varje spelare, oavsett handicap, ska känna sig varmt välkommen.</p>
-     </div>
-    </div>
-  </section>
- <section class="BANA">
-  <div class="page.container">
-        <div class="Faciliteter-header">
-          <div>
-            <small>VÅRA ANLÄGGNINGAR</small>
-            <h2> Banan & Faciliteter</h2>
+    <main class="main">
+      <section class="om-gulfklubb-centar">
+        <ul>
+          <li><small>VÅR IDENTITET & ARV</small></li>
+        </ul>
+        <h1>Om Golfklubb Centar</h1>
+        <p>
+          Inbäddad i det tidlösa mellansvenska kulturlandskapet förenar
+          Golfklubb Centar Sweden orörd skandinavisk natur med kompromisslös
+          mästerskapskvalitet. Här möts stillsam avkoppling och ren golfpassion
+          på rättvisa villkor.
+        </p>
+        <div>
+          <div class="image-cuntainer">
+            <img src="assets/img/pic1.jpg" alt="pic1" />
           </div>
-          <p>Formgivna för såväl fokuserad träning som rofylld rekreation efter genomförd rond.</p>
-        </div>
-        <div class="facilities-grid">
-          <div class="facility-card">
-          <div class="card-top">
-            <small>BANA</small>
-            <img src="assets/img/Bana.png" alt="Bana">
-          </div>
-          <h3>18-håls Mästerskapsbana</h3>
-          <p>Par 72 designad med generösa landningsytor, strategiskt placerade bunkrar och snabba, ärliga greener som utmanar klubbval och precision.</p>
-          <div class="card-bottom">
-            <span>6 340 meter (Vit Tee)</span>
-            <span>Slope 134</span>
+          <div class="image-text">
+            <small>HÅL 7 - SKOGGSGLÄNTAN</small>
+            <h2>En hyllning till det skandinaviska landskapet</h2>
           </div>
         </div>
-
-        <div class="facility-card">
-          <div class="card-top">
-            <small>TRÄNING</small>
-            <img src="assets/img/Träning.png" alt="Träning">
-          </div>
-          <h3>Range & Övningsområde</h3>
-          <p>
-            Toppmodern driving range med TrackMan
-            Range-teknologi på samtliga mattor, två
-            stora övningsgreener för puttning samt
-            specialdesignad närspelsgreen med
-            bunkrar.
-          </p>
-          <div class="card-bottom">
-            <span>Öppet dygnet runt</span>
-            <span>30 Utslagsplatser</span>
-          </div>
-        </div>
-
-        <div class="facility-card">
-          <div class="card-top">
-            <small>GEMENSKAP</small>
-            <img src="assets/img/gemenskap.png" alt="Gemenskap">
-          </div>
-          <h3>Klubbhus & Restaurang</h3>
-          <p>
-           Ett klassiskt skandinaviskt trähus med
-           solterrass över 18:e green. Här serveras
-           närproducerad svensk mat, förstklassigt
-           kaffe och en välutrustad Pro Shop.
-          </p>
-          <div class="card-bottom">
-            <span>Fullständiga rättigheter</span>
-            <span>Terrass & Lounge</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <!-- BANSKÖTSEL -->
-<section class="banskotsel">
-  <div class="page-container banskotsel-grid">
-  <div class="banskotsel-text">
-  <small class="section-label">GEO-CERTIFIERAD ANLÄGGNING</small>
-  <h2>Banskötsel i samklang med den svenska naturen</h2>
-  <p>
-    Under ledning av vår banchef förvaltas Golfklubb Centars 120 hektar mark
-    enligt strikta miljöriktlinjer. Vi minimerar vattenförbrukningen genom
-    intelligent bevattningsstyrning och slutet dammsystem som samlar naturligt
-    regnvatten.
-  </p>
-
-  <p>
-    Runt hålen bevaras ängsmarker och våtmarker, vilket ger skydd åt lokala
-    fågelarter och pollinerare. Det är vår övertygelse att en golfbana av absolut
-    högsta klass inte bara ska spelas i naturen, utan aktivt bidra till dess
-    långsiktiga hälsa.
-  </p>
-
-  <div class="banskotsel-stats">
-    <div class="stat">
-    <h3>100%</h3>
-    <p>Biologiskt nedbrytbar gödning</p>
-    </div>
-
-    <div class="stat">
-    <h3>Cirkulär</h3>
-    <p>Vattenåtervinning via egna dammar</p>
-    </div>
-  </div>
-</div>
-
-  <div class="banskotsel-image">
-  <img src="assets/img/banaskötsel.png" alt="nanaskötsel"/>
-  </div>
-
-</div>
-</section>
-
-<!-- STYRELSE -->
-<section class="styrelse">
-<div class="page-container">
-
-<div class="styrelse-header">
-<small>LEDNING & TRÄNING</small>
-
-<h2>Styrelse & Kontaktpersoner</h2>
-
-<p>
-Tveka inte att höra av dig till oss om du
-har frågor om medlemskap, banans status
-eller privatlektioner.
-</p>
-</div>
-
-<div class="styrelse-grid">
-
-<div class="person-card">
-<small>KLUBBCHEF & VD</small>
-<h3>Henrik Lindqvist</h3>
-<p>
-Ansvarig för klubbens övergripande
-verksamhet, medlemsservice,
-tävlingsarrangemang och partnerskap.
-</p>
-<div class="person-email">
-<i class="ri-mail-line"></i>
-<a href="mailto:henrik.lindqvist@golfklubbcentar.se">
-henrik.lindqvist@golfklubbcentar.se
-</a>
-</div>
-</div>
-
-<div class="person-card">
-<small>BANCHEF / COURSE MANAGER</small>
-<h3>Magnus Ekström</h3>
-<p>
-Leder banpersonalen i det dagliga
-arbetet med greenytor, ekologisk
-skötsel och anläggningens kondition.
-</p>
-<div class="person-email">
-<i class="ri-mail-line"></i>
-<a href="mailto:magnus.ekstrom@golfklubbcentar.se">
-magnus.ekstrom@golfklubbcentar.se
-</a>
-</div>
-</div>
-
-<div class="person-card">
-<small>HEAD PGA PROFESSIONAL</small>
-<h3>Elin Wallin</h3>
-<p>
-Utbildare för juniorer, elit och
-nybörjare. Ansvarig för träningsstudion
-och utrustningsanpassning i shopen.
-</p>
-<div class="person-email">
-<i class="ri-mail-line"></i>
-<a href="mailto:elin.wallin@golfklubbcentar.se">
-elin.wallin@golfklubbcentar.se
-</a>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-</main>
-
-<!--==================== NEWSLETTER ====================-->
-    <footer id="newsletter" class="newsletter"></footer>
-
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-      <div class="container-top">
-        <div class="container-logo-text">
-          <div class="footer-logo-container">
-            <a class="logo-footer" href=""
-              ><img src="assets/img/Logo-white-inv.png" alt="Logo"
-            /></a>
-            <p><a href="">Centar Sweden</a><strong></strong></p>
-          </div>
-
-          <div class="footer-text">
+      </section>
+      <section class="historia-vision">
+        <div class="page-container history-grid">
+          <div class="grundat-1994">
+            <small>GRUNDAT 1994</small>
+            <h2>Vår Historia & Vision</h2>
             <p>
-              Skandinavisk golfupplevelse i harmoni med naturen. Beläget i
-              Golfdalens <br />
-              historiska kulturlandskap sedan 1984 med 18 mästerskapshål och
-              gästfrihet av högsta klass.
+              I tre decennier har vi förvaltat marken med vördnad för det
+              omgivande landskapet, där varje fairway skapats för att följa
+              naturens naturliga konturer.
+            </p>
+            <div class="år-30">
+              <h3>30 ÅR</h3>
+              <p>
+                Av kontinuerlig banskötsel, mästerskapsarrangemang och
+                skandinavisk klubbgemenskap i harmonisk samklang.
+              </p>
+            </div>
+          </div>
+          <div class="Tidiga-Rötter">
+            <img src="assets/img/Tidiga Rötter.png" alt="tidiga rätter.png" />
+            <h3>Tidiga Rötter</h3>
+            <p>
+              Golfklubb Centar etablerades sommaren 1994 av en samling
+              passionerade golfspelare och banariktekter med en tydlig idè: att
+              bygga en bana som inte tvingar fram artificiella hinder, utan
+              låter terrängen, rullande ¨sar och tallhedar diktera spelets
+              strategi.
+            </p>
+          </div>
+          <div class="Framtidsvisionen">
+            <img
+              src="assets/img/Framtidsvisionen.png"
+              alt="Framtidsvisionen.png"
+            />
+            <h3>Framtidsvisionen</h3>
+            <p>
+              Vår vision är att erbjuda en av Nordens främsta golfmiljöer genom
+              lågamäld elegans, hög tillgänglighet och respekt för den biologisk
+              mångfalden. Varje spelare, oavsett handicap, ska känna sig varmt
+              välkommen.
             </p>
           </div>
         </div>
+      </section>
+      <section class="BANA">
+        <div class="page.container">
+          <div class="Faciliteter-header">
+            <div>
+              <small>VÅRA ANLÄGGNINGAR</small>
+              <h2>Banan & Faciliteter</h2>
+            </div>
+            <p>
+              Formgivna för såväl fokuserad träning som rofylld rekreation efter
+              genomförd rond.
+            </p>
+          </div>
+          <div class="facilities-grid">
+            <div class="facility-card">
+              <div class="card-top">
+                <small>BANA</small>
+                <img src="assets/img/Bana.png" alt="Bana" />
+              </div>
+              <h3>18-håls Mästerskapsbana</h3>
+              <p>
+                Par 72 designad med generösa landningsytor, strategiskt
+                placerade bunkrar och snabba, ärliga greener som utmanar
+                klubbval och precision.
+              </p>
+              <div class="card-bottom">
+                <span>6 340 meter (Vit Tee)</span>
+                <span>Slope 134</span>
+              </div>
+            </div>
 
-        <div>
-          <ul class="footer-links">
-            <li id="utforska">UTFORSKA</li>
-            <li><a href="index.html">Startsida</a></li>
-            <li><a href="om-oss.html">Om Oss</a></li>
-            <li><a href="">Bana</a></li>
-            <li><a href="medlem.html">Medlemskap</a></li>
-          </ul>
+            <div class="facility-card">
+              <div class="card-top">
+                <small>TRÄNING</small>
+                <img src="assets/img/Träning.png" alt="Träning" />
+              </div>
+              <h3>Range & Övningsområde</h3>
+              <p>
+                Toppmodern driving range med TrackMan Range-teknologi på
+                samtliga mattor, två stora övningsgreener för puttning samt
+                specialdesignad närspelsgreen med bunkrar.
+              </p>
+              <div class="card-bottom">
+                <span>Öppet dygnet runt</span>
+                <span>30 Utslagsplatser</span>
+              </div>
+            </div>
+
+            <div class="facility-card">
+              <div class="card-top">
+                <small>GEMENSKAP</small>
+                <img src="assets/img/gemenskap.png" alt="Gemenskap" />
+              </div>
+              <h3>Klubbhus & Restaurang</h3>
+              <p>
+                Ett klassiskt skandinaviskt trähus med solterrass över 18:e
+                green. Här serveras närproducerad svensk mat, förstklassigt
+                kaffe och en välutrustad Pro Shop.
+              </p>
+              <div class="card-bottom">
+                <span>Fullständiga rättigheter</span>
+                <span>Terrass & Lounge</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+      <!-- BANSKÖTSEL -->
+      <section class="banskotsel">
+        <div class="page-container banskotsel-grid">
+          <div class="banskotsel-text">
+            <small class="section-label">GEO-CERTIFIERAD ANLÄGGNING</small>
+            <h2>Banskötsel i samklang med den svenska naturen</h2>
+            <p>
+              Under ledning av vår banchef förvaltas Golfklubb Centars 120
+              hektar mark enligt strikta miljöriktlinjer. Vi minimerar
+              vattenförbrukningen genom intelligent bevattningsstyrning och
+              slutet dammsystem som samlar naturligt regnvatten.
+            </p>
 
-        <div>
-          <ul class="footer-links">
-            <li id="service">SERVICE & INFO</li>
-            <li><a href="restaurang.html">Restaurang</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="">Tävlingar & Event</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-          </ul>
+            <p>
+              Runt hålen bevaras ängsmarker och våtmarker, vilket ger skydd åt
+              lokala fågelarter och pollinerare. Det är vår övertygelse att en
+              golfbana av absolut högsta klass inte bara ska spelas i naturen,
+              utan aktivt bidra till dess långsiktiga hälsa.
+            </p>
+
+            <div class="banskotsel-stats">
+              <div class="stat">
+                <h3>100%</h3>
+                <p>Biologiskt nedbrytbar gödning</p>
+              </div>
+
+              <div class="stat">
+                <h3>Cirkulär</h3>
+                <p>Vattenåtervinning via egna dammar</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="banskotsel-image">
+            <img src="assets/img/banaskötsel.png" alt="nanaskötsel" />
+          </div>
         </div>
-      </div>
+      </section>
 
-      <hr class="footer-line" />
+      <!-- STYRELSE -->
+      <section class="styrelse">
+        <div class="page-container">
+          <div class="styrelse-header">
+            <small>LEDNING & TRÄNING</small>
 
-      <div class="rättigheter-container">
-        <div class="rättigheter">
-          <p>
-            © 2025 Golfklubb Centar Sweden. Alla rättigheter förbehållna.
-            Skandinavisk golfupplevelse i harmoni med naturen.
-          </p>
+            <h2>Styrelse & Kontaktpersoner</h2>
+
+            <p>
+              Tveka inte att höra av dig till oss om du har frågor om
+              medlemskap, banans status eller privatlektioner.
+            </p>
+          </div>
+
+          <div class="styrelse-grid">
+            <div class="person-card">
+              <small>KLUBBCHEF & VD</small>
+              <h3>Henrik Lindqvist</h3>
+              <p>
+                Ansvarig för klubbens övergripande verksamhet, medlemsservice,
+                tävlingsarrangemang och partnerskap.
+              </p>
+              <div class="person-email">
+                <i class="ri-mail-line"></i>
+                <a href="mailto:henrik.lindqvist@golfklubbcentar.se">
+                  henrik.lindqvist@golfklubbcentar.se
+                </a>
+              </div>
+            </div>
+
+            <div class="person-card">
+              <small>BANCHEF / COURSE MANAGER</small>
+              <h3>Magnus Ekström</h3>
+              <p>
+                Leder banpersonalen i det dagliga arbetet med greenytor,
+                ekologisk skötsel och anläggningens kondition.
+              </p>
+              <div class="person-email">
+                <i class="ri-mail-line"></i>
+                <a href="mailto:magnus.ekstrom@golfklubbcentar.se">
+                  magnus.ekstrom@golfklubbcentar.se
+                </a>
+              </div>
+            </div>
+
+            <div class="person-card">
+              <small>HEAD PGA PROFESSIONAL</small>
+              <h3>Elin Wallin</h3>
+              <p>
+                Utbildare för juniorer, elit och nybörjare. Ansvarig för
+                träningsstudion och utrustningsanpassning i shopen.
+              </p>
+              <div class="person-email">
+                <i class="ri-mail-line"></i>
+                <a href="mailto:elin.wallin@golfklubbcentar.se">
+                  elin.wallin@golfklubbcentar.se
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+    </main>
 
-        <div class="policy-container">
-          <ul class="policy">
-            <li><a href="">Integritetspolicy</a></li>
-            <li><a href="">Tillgänglighet</a></li>
-            <li><a href="">Kansli Online</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-     <!--=============== Javascript ===============-->
+    <!--==================== NEWSLETTER ====================-->
+    <footer id="newsletter" class="newsletter"></footer>
+
+    <!--==================== FOOTER ====================-->
+    <footer id="footer" class="footer"></footer>
+    <!--=============== Javascript ===============-->
     <script src="./assets/js/script.js" defer></script>
   </body>
 </html>
