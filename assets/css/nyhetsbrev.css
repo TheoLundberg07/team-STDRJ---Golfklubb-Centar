@@ -156,6 +156,10 @@ img {
 }
 
 @media (max-width: 480px) {
+  
+  .newsletter{
+    padding: 10px;
+  }
   .newsletter form {
     display: flex;
     flex-direction: column;
@@ -164,6 +168,7 @@ img {
     width: min(90%, 400px);
     margin: 2rem auto;
   }
+
 
   .newsletter form input[type="email"],
   .newsletter form input[type="submit"] {
