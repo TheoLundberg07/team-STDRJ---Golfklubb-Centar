@@ -1,9 +1,1153 @@
-.{
-background-color: blue;
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --first-color: #1b4d3e;
+  --first-color-light: #8abda9;
+  --first-color-alt: #735c00;
+  --title-color: #003629;
+  --text-color: #404945;
+  --text-color-alt: #181c20;
+  --body-text-color: #f7f9ff;
+
+  --body-color: #ffffff;
+  --body-color-alt: #f7f9ff;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --noto-font-family: "Noto Serif", serif;
+  --manrope-font-family: "Manrope", sans-serif;
+
+  --biggest-font-size: 2rem;
+  --bigger-font-size: 1.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
 }
-.table
-{
-    background-color: blueviolet;
 
+/*========== Responsive typography ==========*/
+@media screen and (width >= 1150px) {
+  :root {
+    --biggest-font-size: 3.5rem;
+    --bigger-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+  }
+}
+
+/*=============== HEADER & NAV ===============*/
+
+nav {
+  width: 100%;
+  background-color: var(--body-color-alt);
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+#desktop-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 550px;
+  height: 100%;
+}
+
+.links {
+  color: var(--text-color);
+  position: relative;
+  font-weight: var(--font-semi-bold);
+}
+
+#desktop-menu .links {
+  font-size: var(--navbar-links);
+}
+
+.links::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, var(--first-color-alt));
+  height: 4px;
+  width: 0;
+  left: 0;
+  bottom: -6px;
+  border-radius: 100px;
+  transition: 0.25s ease-in-out;
+}
+
+.links:hover::after {
+  width: 100%;
+}
+
+.links:hover {
+  color: var(--first-color-alt);
+}
+
+.active {
+  color: var(--first-color-alt);
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.download-button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  font-size: var(--normal-font-size);
+  font-weight: var(--body-color);
+  transition: 200ms ease;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  scale: 1.05;
+  box-shadow: 0 3px 15px var(--first-color);
+}
+
+.logga-in-desktop {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  font-size: var(--normal-font-size);
+  color: var(--text-color-alt);
+  font-weight: var(--font-semi-bold);
+  background-color: transparent;
+  transition: 200ms ease;
+}
+
+.logga-in-desktop:hover {
+  color: var(--first-color);
+}
+
+.shop-desktop {
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  cursor: pointer;
+  fill: var(--text-color-alt);
+}
+
+.shop-desktop:hover {
+  fill: var(--first-color);
+}
+
+/* ========== Mobile Menu ========== */
+
+.open-menu {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  display: none;
+  cursor: pointer;
+  fill: var(--first-color);
+  transition: 200ms ease;
+}
+
+.open-menu:hover {
+  fill: var(--first-color-alt);
+}
+
+.shop-mobile {
+  display: none;
+}
+
+.logga-in-mobile {
+  display: none;
+}
+
+.button-container-mobile {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  #desktop-menu {
+    display: none;
+  }
+  .button-container {
+    display: none;
+  }
+  .open-menu {
+    display: inline-block;
+  }
+  .shop-mobile {
+    display: inline-block;
+  }
+  .logga-in-mobile {
+    display: inline-block;
+  }
+  nav {
+    padding: 0 20px;
+  }
+  .button-container-mobile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.logga-in-mobile {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  font-size: var(--normal-font-size);
+  color: var(--text-color-alt);
+  font-weight: var(--font-semi-bold);
+  background-color: transparent;
+  transition: 200ms ease;
+}
+
+.logga-in-mobile:hover {
+  color: var(--first-color);
+}
+
+.shop-mobile {
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  cursor: pointer;
+  fill: var(--text-color-alt);
+}
+
+.shop-mobile:hover {
+  fill: var(--first-color);
+}
+
+[popover] {
+  background-color: var(--body-color);
+  position: fixed;
+  inset: 0;
+  margin: 0 0 0 auto;
+  min-width: 300px;
+  min-height: 400px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  box-shadow: -20px 20px 50px hsla(0, 0%, 0, 0.3);
+  transition: all 0.25s ease;
+}
+
+[popover]::backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+}
+
+@starting-style {
+  #mobile-menu:popover-open {
+    opacity: 0.5;
+    transform: translateX(350px);
+  }
+}
+
+.close-menu {
+  margin: 25px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  fill: var(--first-color);
+  transition: 200ms ease;
+}
+
+.close-menu:hover {
+  fill: var(--first-color-alt);
+}
+
+.mobile-menu li {
+  width: auto;
+  text-align: start;
+  margin: 0 0 20px 30px;
+}
+
+.mobile-menu .links {
+  font-size: var(--bigger-font-size);
+}
+/*=============== FOOTER ===============*/
+
+footer {
+  background-color: var(--first-color);
+  color: var(--first-color-light);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px 30px;
+  gap: 35px;
+}
+
+.container-top {
+  display: grid;
+  align-self: stretch;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 35px;
+}
+
+.container-logo-text {
+  grid-column: 1/ 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.footer-logo-container a {
+  font-size: var(--h2-font-size);
+  color: var(--body-color-alt);
+}
+
+.footer-links {
+  color: var(--body-color-alt);
+}
+
+.footer-links a {
+  color: var(--first-color-light);
+}
+
+.footer-links a:hover {
+  color: var(--body-color-alt);
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+#utforska {
+  margin-bottom: 12px;
+}
+
+#service {
+  margin-bottom: 12px;
+}
+
+.footer-line {
+  width: 100%;
+  border: 1px solid var(--first-color-light);
+}
+
+.rättigheter-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+
+.policy {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+.policy a {
+  color: var(--first-color-light);
+}
+
+.policy a:hover {
+  color: var(--body-color-alt);
+}
+
+@media (max-width: 750px) {
+  .container-top {
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    gap: 35px;
+  }
+  .footer-logo-container {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1300px) {
+  .rättigheter-container {
+    flex-direction: column;
+  }
+  .rättigheter {
+    width: 100%;
+  }
+  .policy-container {
+    width: 100%;
+  }
+  .policy {
+    justify-content: flex-start;
+  }
+}
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+button {
+  font-family: var(--manrope-font-family);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-family: var(--noto-font-family);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  z-index: 9;
+}
+/*-----body----*/
+main {
+  margin-left: 9px;
+  margin-right: 9px;
+}
+section.om-gulfklubb-centar ul {
+  list-style-position: inside;
+}
+section.om-gulfklubb-centar li {
+  background-color: #aeecc5;
+  width: fit-content;
+}
+section.om-gulfklubb-centar h1 {
+  color: #035e43;
+}
+section.om-gulfklubb-centar p {
+  width: 50%;
+}
+
+.image-cuntainer {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+.om-gulfklubb-centar > h1 {
+  font-size: clamp(32px, 4.5vw, 42px);
+  margin: 14px 0 12px;
+}
+
+.om-gulfklubb-centar > p {
+  max-width: 540px;
+  margin-bottom: 32px;
+}
+
+.image-cuntainer {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+}
+.image-cuntainer > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.image-text {
+  position: relative;
+  translate: 0 -110%;
+  left: 12px;
+  background: rgba(250, 249, 245, 0.96);
+  padding: 15px 22px;
+  width: fit-content;
+}
+.image-text small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  margin-bottom: 5px;
+}
+.image-text h2 {
+  font-weight: 400;
+  font-size: 21px;
+  margin-bottom: 0%;
+}
+/*"Historia-vision"*/
+.historia-vision {
+  margin-top: 25px;
+  background: #ffffff;
+  padding: 20px 24px;
+  border: 1px solid #e5e5e0;
+}
+.history-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+}
+.grundat-1994 h2 {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.history-grid p {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #626760;
+}
+.år-30 {
+  background: #f5f5f2;
+  border: 1px solid #e9e9e4;
+  padding: 10px 15px;
+  margin-top: 28px;
+}
+.år-30 h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.år-30 p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.Tidiga-Rötter,
+.Framtidsvisionen {
+  padding-top: 2px;
+}
+
+.Tidiga-Rötter > img,
+.Framtidsvisionen > img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.Tidiga-Rötter h3,
+.Framtidsvisionen h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 13px;
+}
+/*Facilities section*/
+.BANA {
+  background: #f1f3f1;
+  padding: 80px 0 100px;
+}
+.Faciliteter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.Faciliteter-header h2 {
+  font-size: 38px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.Faciliteter-header p {
+  max-width: 380px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #666b63;
+  margin-bottom: 4px;
+}
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+.facility-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  padding: 30px 27px 24px;
+  min-height: 290px;
+  border: 1px solid #e8ebe7;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.card-top small {
+  background: #edf0e5;
+  padding: 5px 9px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.card-top img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.facility-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 13px;
+}
+
+.facility-card > p {
+  font-size: 13px;
+  line-height: 1.75;
+  color: #666b63;
+  margin-bottom: 24px;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-top: 1px solid #e9ebe7;
+  padding-top: 17px;
+  margin-top: auto;
+}
+
+.card-bottom span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #60675d;
+}
+
+/* BANSKOTSEL*/
+
+.banskotsel {
+  background-color: #f7f8fc;
+  padding: 80px 0 100px;
+}
+
+.banskotsel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.banskotsel-text {
+  min-width: 0;
+}
+
+.section-label {
+  display: inline-block;
+  background-color: #e4eee7;
+  color: #205b46;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.banskotsel-text h2 {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #164e3d;
+  margin-bottom: 24px;
+}
+
+.banskotsel-text > p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #626760;
+  margin-bottom: 18px;
+}
+
+.banskotsel-stats {
+  display: flex;
+  gap: 20px;
+  margin-top: 32px;
+  margin-left: 32px;
+  padding-bottom: 32px;
+}
+
+.stat {
+  flex: 1;
+  min-width: 0;
+}
+
+.stat + .stat {
+  border-left: 1px solid #e2e5e1;
+  padding-left: 20px;
+}
+
+.stat h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #164e3d;
+  margin-bottom: 5px;
+}
+
+.stat p {
+  font-size: 12px;
+  color: #626760;
+  line-height: 1.5;
+}
+
+.banskotsel-image img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== STYRELSE ===== */
+
+.styrelse {
+  background-color: #f7f8fc;
+  padding: 80px 0 100px;
+  border-top: 1px solid #e9ecef;
+}
+
+.styrelse-header {
+  margin-bottom: 45px;
+}
+
+.styrelse-header small {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #69716b;
+}
+
+.styrelse-header h2 {
+  font-size: 38px;
+  font-weight: 400;
+  color: #164e3d;
+  margin: 15px 0 10px;
+}
+
+.styrelse-header p {
+  max-width: 580px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #626760;
+}
+
+.styrelse-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.person-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #e8ebe7;
+  padding: 28px 24px 22px;
+  min-width: 0;
+  min-height: 250px;
+}
+
+.person-card small {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: #69716b;
+  margin-bottom: 14px;
+}
+
+.person-card h3 {
+  font-size: 21px;
+  font-weight: 500;
+  color: #164e3d;
+  margin-bottom: 12px;
+}
+
+.person-card > p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #626760;
+  margin-bottom: 24px;
+}
+
+.person-email {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid #e9ebe7;
+  padding-top: 17px;
+  margin-top: auto;
+  min-width: 0;
+}
+
+.person-email i {
+  font-size: 16px;
+  color: #5c7165;
+}
+
+.person-email a {
+  font-size: 11px;
+  color: #3d49cf;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.person-email a:hover {
+  text-decoration: underline;
+}
+
+/*=============== TABLET ===============*/
+
+@media (min-width: 601px) and (max-width: 950px) {
+  /* About section */
+
+  .om-gulfklubb-centar {
+    padding: 40px 25px;
+  }
+
+  section.om-gulfklubb-centar p {
+    width: 80%;
+  }
+
+  .image-cuntainer {
+    height: 350px;
+  }
+
+  .image-text {
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 18px;
+  }
+
+  /* Historia & Vision */
+
+  .historia-vision {
+    padding: 40px 25px;
+  }
+
+  .history-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+  }
+
+  .grundat-1994 {
+    grid-column: 1 / -1;
+  }
+
+  .grundat-1994 h2 {
+    font-size: 30px;
+  }
+
+  /* Banan & Faciliteter */
+
+  .BANA {
+    padding: 60px 25px;
+  }
+
+  .Faciliteter-header {
+    gap: 25px;
+  }
+
+  .Faciliteter-header h2 {
+    font-size: 32px;
+  }
+
+  .facilities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .facility-card {
+    padding: 25px 20px;
+  }
+}
+/* banskötsel och styrelsen*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .banskotsel {
+    padding: 60px 0;
+  }
+
+  .banskotsel-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .banskotsel-text h2 {
+    font-size: 34px;
+  }
+
+  .banskotsel-image img {
+    height: 350px;
+  }
+
+  .styrelse {
+    padding: 60px 0;
+  }
+
+  .styrelse-header h2 {
+    font-size: 34px;
+  }
+
+  .styrelse-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .person-card {
+    min-height: 250px;
+  }
+}
+
+/*=============== MOBILE ===============*/
+
+@media (max-width: 600px) {
+  /* About section */
+
+  .om-gulfklubb-centar {
+    padding: 30px 16px;
+  }
+
+  .om-gulfklubb-centar > h1 {
+    font-size: 30px;
+  }
+
+  section.om-gulfklubb-centar p {
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .image-cuntainer {
+    height: 250px;
+  }
+
+  .image-text {
+    bottom: 12px;
+    left: 12px;
+    padding: 10px 14px;
+    max-width: calc(100% - 24px);
+  }
+
+  .image-text h2 {
+    font-size: 16px;
+  }
+
+  .image-text small {
+    font-size: 8px;
+  }
+
+  /* Historia & Vision */
+
+  .historia-vision {
+    padding: 35px 16px;
+  }
+
+  .history-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .grundat-1994 {
+    grid-column: auto;
+  }
+
+  .grundat-1994 h2 {
+    font-size: 28px;
+  }
+
+  .history-grid p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .år-30 {
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .år-30 h3 {
+    font-size: 22px;
+  }
+
+  .Tidiga-Rötter > img,
+  .Framtidsvisionen > img {
+    margin-bottom: 12px;
+  }
+
+  /* Banan & Faciliteter */
+
+  .BANA {
+    padding: 45px 16px;
+  }
+
+  .Faciliteter-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .Faciliteter-header h2 {
+    font-size: 28px;
+  }
+
+  .Faciliteter-header p {
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .facilities-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .facility-card {
+    padding: 22px 20px;
+    min-height: auto;
+  }
+
+  .facility-card h3 {
+    font-size: 19px;
+  }
+
+  .facility-card > p {
+    font-size: 13px;
+  }
+
+  .card-bottom {
+    gap: 12px;
+  }
+}
+/*banaskötsel och styrelsen*/
+
+@media (max-width: 767px) {
+  .banskotsel {
+    padding: 45px 0 60px;
+  }
+
+  .banskotsel-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .section-label {
+    font-size: 9px;
+    padding: 6px 10px;
+  }
+
+  .banskotsel-text h2 {
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
+
+  .banskotsel-text > p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .banskotsel-stats {
+    gap: 15px;
+    margin-top: 25px;
+  }
+
+  .stat + .stat {
+    padding-left: 15px;
+  }
+
+  .stat h3 {
+    font-size: 19px;
+  }
+
+  .stat p {
+    font-size: 11px;
+  }
+
+  .banskotsel-image img {
+    height: 240px;
+  }
+
+  .styrelse {
+    padding: 55px 0 65px;
+  }
+
+  .styrelse-header {
+    margin-bottom: 30px;
+  }
+
+  .styrelse-header h2 {
+    font-size: 29px;
+    line-height: 1.25;
+  }
+
+  .styrelse-header p {
+    font-size: 13px;
+  }
+
+  .styrelse-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .person-card {
+    padding: 24px 20px;
+    min-height: 0;
+  }
+
+  .person-card h3 {
+    font-size: 20px;
+  }
+
+  .person-card > p {
+    font-size: 13px;
+  }
+
+  .person-email a {
+    font-size: 11px;
+  }
 }

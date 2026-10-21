@@ -13,6 +13,17 @@ async function loadComponent(id, file) {
   }
 }
 
-loadComponent("header", "/components/header.html");
-loadComponent("newsletter", "/components/nyhetsbrev.html");
-loadComponent("footer", "/components/footer.html");
+loadComponent("header", "./components/header.html");
+loadComponent("newsletter", "./components/nyhetsbrev.html");
+loadComponent("footer", "./components/footer.html");
+
+/* ====== CHOOSE MEMBERSHIPFORM ======== */
+
+const params = new URLSearchParams(window.location.search);
+const membership = params.get("type");
+
+const select = document.querySelector("#membership");
+
+if (membership) {
+  select.value = membership;
+}

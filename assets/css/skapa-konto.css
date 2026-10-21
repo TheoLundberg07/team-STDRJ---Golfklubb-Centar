@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*======== VARIABLES CSS ======*/
+:root {
+  /*======== Colors =======*/
+  --first-color: #1b4d3e;
+  --first-color-light: #8abda9;
+  --first-color-alt: #735c00;
+  --title-color: #003629;
+  --text-color: #404945;
+  --text-color-alt: #151c20;
+  --body-text-color: #f7f9ff;
+  --border: #c0c9c399;
+
+  --body-color: #fff;
+  --body-color-alt: #f7f9ff;
+
+  /*========= Font and typography =======*/
+  --noto-font-family: "Noto Serif", serif;
+  --manrope-font-family: "Manrope", sans-serif;
+
+  --biggest-font-size: 2rem;
+  --bigger-font-size: 1.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (width >= 1150px) {
+  :root {
+    --biggest-font-size: 3.5rem;
+    --bigger-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+button {
+  font-family: var(--manrope-font-family);
+}
+
+body {
+  background-color: var(--body-color-alt) !important;
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-family: var(--noto-font-family);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  z-index: 9;
+}
+
+/* =========== CREATE MEMBERSHIP ========= */
+.container input,
+.container label,
+.container button {
+  display: block;
+}
+
+.container {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30rem;
+  max-width: 80vw;
+  padding: 2.5rem;
+  background-color: var(--body-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin: 5rem 0;
+}
+
+.container p strong {
+  text-transform: uppercase;
+  color: var(--first-color-alt);
+  font-weight: var(--font-semi-bold);
+  font-size: var(--small-font-size);
+}
+
+.container a {
+  text-decoration: underline;
+}
+
+.brand-title {
+  font-family: var(--noto-font-family);
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+  letter-spacing: -0.7px;
+  font-size: 2.5rem;
+}
+
+.inlog-text {
+  text-align: center;
+  letter-spacing: -0.5px;
+  margin-bottom: 2rem;
+}
+
+form {
+  width: 100%;
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: var(--font-semi-bold);
+  font-size: var(--small-font-size);
+  line-height: 16px;
+  margin-bottom: 0.5rem;
+}
+
+.container input,
+.container select {
+  background-color: var(--body-color-alt);
+}
+
+.container input,
+.container select,
+.submit-btn {
+  width: 100%;
+  height: 2.8rem;
+  padding: 13px 16px;
+  font-size: var(--normal-font-size);
+  font-weight: 50;
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
+}
+
+input::placeholder,
+select {
+  color: var(--text-color);
+  font-weight: 100;
+}
+
+p.policy-text {
+  font-size: var(--small-font-size);
+}
+
+.submit-btn {
+  color: var(--body-color);
+  background: var(--first-color);
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  border-radius: 2px;
+  padding: 14px 24px;
+  height: 48px;
+  border: none;
+  margin: 2rem 0 0.5rem 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex div {
+  display: inline;
+}
+
+.flex a {
+  text-align: end;
+}
+
+.flex label {
+  display: inline;
+  text-transform: none;
+}
+
+.alt-login {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: var(--h3-font-size);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin: 1rem 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.divider h2 {
+  font-size: var(--small-font-size);
+  font-family: var(--manrope-font-family);
+  font-weight: var(--font-regular);
+  color: var(--text-color);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.alt-login p {
+  margin-bottom: 0.7rem;
+}
+
+.container a {
+  color: var(--first-color);
+  font-weight: bold;
+}
+
+@media (max-width: 390px) {
+  .brand-title {
+    font-size: var(--h1-font-size);
+  }
+}

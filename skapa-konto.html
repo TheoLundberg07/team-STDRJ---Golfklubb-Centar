@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/skapa-konto.css" />
+    <link rel="stylesheet" href="assets/css/nyhetsbrev.css" />
+
+    <title>Golfklubb</title>
+  </head>
+
+  <body>
+    <!--==================== HEADER & NAV ====================-->
+    <header id="header"></header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <div class="container">
+        <p><strong>bli en del av klubben</strong></p>
+        <h1 class="brand-title">Medlemsansökan</h1>
+        <p class="inlog-text">
+          Fyll i formuläret nedan så kontaktar kansliet dig inom 24 timmar med
+          bekräftelse och välkomstinformation.
+        </p>
+        <form class="inputs">
+          <label for="name">för- & efternamn *</label>
+          <input type="text" id="name" placeholder="t.ex Johan Lindqvist" />
+          <label for="email">e-postadress *</label>
+          <input type="email" id="email" placeholder="namn@epost.com" />
+          <label for="golfid">Golf-ID & handicap</label>
+          <input
+            type="text"
+            id="golfid"
+            placeholder="t.ex. 840512-014 (Hcp 14.2) eller Nybörjare"
+          />
+          <label for="membership">val av medlemsform</label>
+          <select name="membership" id="membership">
+            <option value="senior">Fullvärdig Senior - 12900kr/år</option>
+            <option value="basic">Vardagsmedlem - 8900kr/år</option>
+            <option value="junior">Junior (upp till 21 år) - 3400kr/år</option>
+          </select>
+          <p class="policy-text">
+            Genom att skicka ansökan godkänner du hantering av personuppgifter
+            enligt Golfklubb Centars integritetspolicy och Svenska
+            Golfförbundets stadgar.
+          </p>
+          <button type="submit" class="submit-btn">
+            SKICKA ANSÖKAN
+            <i class="ri-arrow-right-line"></i>
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <!--==================== NEWSLETTER ====================-->
+    <footer id="newsletter" class="newsletter"></footer>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer" id="footer"></footer>
+
+    <!--=============== Javascript ===============-->
+    <script src="./assets/js/script.js" defer></script>
+  </body>
+</html>
