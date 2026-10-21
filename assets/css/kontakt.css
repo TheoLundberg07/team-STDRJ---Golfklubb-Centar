@@ -513,19 +513,6 @@ main {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Footer Styles */
-footer {
-  background-color: var(--deep-fairway-green);
-  color: #ffffff;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .contact-grid {
