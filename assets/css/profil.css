@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*======== VARIABLES CSS ======*/
+:root {
+  /*======== Colors =======*/
+  --first-color: #1b4d3e;
+  --first-color-light: #8abda9;
+  --first-color-bright: #059669;
+  --first-color-alt: #735c00;
+  --first-color-alt-light: #cba72f;
+  --title-color: #003629;
+  --text-color: #404945;
+  --text-color-alt: #151c20;
+  --body-text-color: #f7f9ff;
+  --border: #c0c9c399;
+
+  --body-color: #fff;
+  --body-color-alt: #f7f9ff;
+
+  /*========= Font and typography =======*/
+  --noto-font-family: "Noto Serif", serif;
+  --manrope-font-family: "Manrope", sans-serif;
+
+  --biggest-font-size: 2rem;
+  --bigger-font-size: 1.5rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.6875rem;
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (width >= 900px) {
+  :root {
+    --biggest-font-size: 3.5rem;
+    --bigger-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+  }
+}
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+button {
+  font-family: var(--manrope-font-family);
+}
+
+body {
+  background-color: var(--body-color-alt) !important;
+  color: var(--text-color);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  font-family: var(--noto-font-family);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  z-index: 9;
+}
+
+/* ========= ACCOUNT PAGE ========= */
+
+.container {
+  display: block;
+  place-self: center;
+  max-width: 45rem;
+}
+
+.welcome-text {
+  text-align: center;
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.welcome-text h1 {
+  font-weight: var(--font-regular);
+  font-size: var(--h1-font-size);
+}
+
+.welcome-text p {
+  font-size: var(--font-regular);
+}
+
+.account {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: var(--body-color);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.account-picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--h1-font-size);
+  font-family: var(--noto-font-family);
+  background-color: var(--body-color-alt);
+  border: 2px solid var(--first-color-alt-light);
+  border-radius: 12px;
+  padding: 0.7rem;
+  width: fit-content;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+}
+
+.account-text {
+  padding-top: 0.5rem;
+}
+
+.account-text h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: 0.5rem;
+}
+
+.account-text p {
+  text-transform: uppercase;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+}
+
+.account-text p::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.5rem;
+  display: inline-flex;
+  background-color: var(--first-color-bright);
+  border-radius: 50%;
+}
+
+.grid-container {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+  max-width: 100%;
+}
+
+.item * {
+  display: block;
+  font-size: var(--smaller-font-size);
+}
+
+.item .item-value {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-bold);
+  margin: 0.3rem 0;
+}
+
+.item:nth-child(2) .item-value {
+  font-size: var(--h2-font-size);
+  font-family: var(--noto-font-family);
+  font-weight: var(--font-semi-bold);
+  margin: 0;
+}
+
+.member-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
+  background-color: var(--body-color);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+.info-field:nth-child(n + 5) {
+  grid-column: 1 / -1;
+}
+
+.info-heading h2 {
+  font-size: var(--h2-font-size);
+}
+
+.member-info p,
+.info-footer {
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.member-info a {
+  color: var(--first-color);
+}
+
+.cell {
+  padding-block: 1rem;
+}
+
+.info-field,
+.info-heading {
+  border-bottom: 1px solid var(--border);
+}
+
+.info-heading:nth-child(2),
+label {
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi-bold);
+  text-align: end;
+}
+
+.checkbox-icon input {
+  display: none;
+}
+
+.checkbox-icon .checked {
+  display: none;
+}
+
+.checkbox-icon input:checked ~ .checked {
+  display: inline-block;
+}
+
+.checkbox-icon input:checked ~ .unchecked {
+  display: none;
+}
+
+.current-benefits {
+  background-color: var(--body-color);
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-block: 2rem;
+}
+
+.current-benefits h2 {
+  font-size: var(--h2-font-size);
+}
+
+.current-benefits p,
+.current-benefits a {
+  font-size: var(--small-font-size);
+  margin-block: 0.5rem;
+  color: var(--text-color);
+}
+
+.current-benefits .card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.current-benefits .card {
+  background-color: var(--body-color-alt);
+  border-radius: 4px;
+}
+
+.current-benefits .card img {
+  border-radius: 4px 4px 0 0;
+}
+
+.current-benefits .card-text {
+  display: grid;
+  padding: 1rem;
+}
+
+.current-benefits .card-text h3 {
+  font-size: var(--h3-font-size);
+}
+
+.current-benefits .card-text a {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  transition: 200ms ease-in-out;
+}
+
+.current-benefits .card-text a:hover {
+  padding-left: 4px;
+}
+
+@media (max-width: 550px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .member-info {
+    grid-template-columns: 1fr;
+  }
+  .member-info .cell {
+    text-align: start;
+  }
+
+  .cell:first-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .cell:last-child {
+    padding-top: 0;
+  }
+}
