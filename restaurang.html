@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content=""
-    />
+    <meta name="description" content="" />
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -24,20 +21,62 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/restaurang.css" />
-    <link rel="stylesheet" href="assets/css/header.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/nyhetsbrev.css" />
 
     <title>Golfklubb</title>
   </head>
 
   <body>
     <!--==================== HEADER & NAV ====================-->
-    <header class="header" id="header"></header>
+    <header id="header"></header>
 
     <!--==================== MAIN ====================-->
-    <main class="main"></main>
+    <main class="main">
+      <section class="hero-section">
+        <div class="hero-text">
+          <div class="hero-tag">
+            <p>
+              <b>gastronomi & terrass</b>
+            </p>
+          </div>
+
+          <h1>Restaurang Centar</h1>
+          <p class="hero-info">
+            Lokal gastronomi tillagad med nordisk omsorg. Njut av säsongens
+            råvaror och utvalda drycker på vår vidsträckta terrass med direkt vy
+            över 18:e hålet och den spegelblanka sjön.
+          </p>
+
+          <div class="hero-button-container">
+            <a href="https://www.google.com/"
+              ><button class="button-hero">
+                <i class="ri-restaurant-fill"></i> Boka bord
+              </button></a
+            >
+            <a href="https://www.google.com/"
+              ><button class="button-hero-light">Se vår meny</button></a
+            >
+          </div>
+        </div>
+
+        <div class="hero-img">
+          <img src="assets/img/restaurang.jpg" alt="golf-bana" />
+        </div>
+      </section>
+      <div class="card-container">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </div>
+    </main>
 
     <!--==================== FOOTER ====================-->
-    <footer class="footer"></footer>
+    <footer id="newsletter"></footer>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer" id="footer"></footer>
+
+    <!-- =============== JAVASCRIPT ============ -->
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
