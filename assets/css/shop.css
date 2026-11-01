@@ -10,8 +10,9 @@
     border: 1px solid rgba(115, 92, 0, 0.4);
     display: inline-flex;
     align-items: center;
-    padding: 5px 11px;
+    padding: 5px 10px;
     gap: 8px;
+    width: fit-content;
     font-family: "Manrope", sans-serif;
     font-size: 11px;
     font-weight: 600;
@@ -608,4 +609,297 @@ margin-top: 2px;
   font-weight: 400;
   line-height: 20px;
   margin: 0;
+}
+/* TABLET*/
+
+@media screen and (max-width: 1024px) {
+
+  /* SHOP HERO */
+
+  .shop-hero {
+    padding: 52px 20px;
+  }
+
+  .shop-hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .shop-hero-content {
+    max-width: 760px;
+  }
+
+  .shop-hero-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+
+  .shop-hero-content p {
+    font-size: 16px;
+    line-height: 27px;
+  }
+
+  .shop-hero-hours {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+
+  /* AKTUELLA ERBJUDANDEN */
+
+  .aktuella-erbjudanden {
+    padding: 56px 0;
+  }
+
+  .offers-container {
+    padding: 0 20px;
+  }
+
+  .offers-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .offers-heading > p {
+    max-width: 600px;
+  }
+
+  .offers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+
+  /* UTVALDA PRODUKTER */
+
+  .utvalda-produkter {
+    padding: 56px 0;
+  }
+
+  .products-container {
+    padding: 0 20px;
+  }
+
+  .products-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .products-heading > p {
+    max-width: 600px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+
+  /* WORKSHOP & SERVICE */
+
+  .workshop-section {
+    padding: 56px 0;
+  }
+
+  .workshop-container {
+    padding: 0 20px;
+  }
+
+  .workshop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+}
+/* MOBILE */
+
+@media screen and (max-width: 767px) {
+
+  /* SHOP HERO */
+
+  .shop-hero {
+    padding: 44px 16px;
+  }
+
+  .shop-hero-inner {
+    gap: 24px;
+  }
+
+  .shop-hero-content {
+    gap: 12px;
+  }
+
+  .shop-hero .text {
+    align-self: flex-start;
+    width: fit-content;
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+
+  .shop-hero-content h1 {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.7px;
+  }
+
+  .shop-hero-content p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .shop-hero-hours {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .shop-hero-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .shop-hero-weekday,
+  .shop-hero-weekend {
+    align-items: center;
+  }
+
+
+  /* AKTUELLA ERBJUDANDEN */
+
+  .aktuella-erbjudanden {
+    padding: 44px 0;
+  }
+
+  .offers-container {
+    padding: 0 16px;
+  }
+
+  .offers-heading {
+    gap: 12px;
+    padding-bottom: 16px;
+  }
+
+  .offers-heading-text h2 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .offers-heading > p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .offers-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .offer-card {
+    min-height: 235px;
+    padding: 20px;
+  }
+
+
+  /* UTVALDA PRODUKTER */
+
+  .utvalda-produkter {
+    padding: 44px 0;
+  }
+
+  .products-container {
+    padding: 0 16px;
+  }
+
+  .products-heading {
+    gap: 12px;
+    padding-bottom: 16px;
+  }
+
+  .products-heading-text h2 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .products-heading > p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .product-card {
+    min-height: 240px;
+    padding: 20px;
+  }
+
+  .product-card-content {
+    padding-bottom: 20px;
+  }
+
+  .product-card-content h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .product-card-footer {
+    gap: 8px;
+  }
+
+  .product-price {
+    font-size: 20px;
+  }
+
+  .product-link {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+
+  /* WORKSHOP & SERVICE */
+
+  .workshop-section {
+    padding: 44px 0;
+  }
+
+  .workshop-container {
+    padding: 0 16px;
+  }
+
+  .workshop-heading {
+    padding-bottom: 16px;
+  }
+
+  .workshop-heading h2 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .workshop-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .workshop-card {
+    min-height: 184px;
+    padding: 20px;
+  }
+
+  .workshop-card h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
 }
