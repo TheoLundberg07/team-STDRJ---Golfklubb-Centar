@@ -1,51 +1,77 @@
-/* Layout för bokningssidan */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f7f9f8;
-  color: #333333;
+/* Grundinställningar */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Introduktion text */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f6f8fb;
+  color: #333333;
+  line-height: 1.5;
+}
+
+.boka-container {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Introduktion & rubriker */
 .boka-intro {
   text-align: center;
-  padding: 40px 20px 20px 20px;
+  margin-bottom: 28px;
+}
+
+.tagg {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #e3ede8;
+  color: #1b4d3e;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.tagg-prick {
+  width: 6px;
+  height: 6px;
+  background-color: #1b4d3e;
+  border-radius: 50%;
 }
 
 .boka-intro h1 {
-  font-size: 36px;
-  color: #12372a;
-  margin: 10px 0;
+  font-family: 'Georgia', serif;
+  font-size: 38px;
+  color: #1b4d3e;
+  font-weight: normal;
+  margin-bottom: 12px;
 }
 
 .boka-intro p {
   color: #555555;
-  margin: 5px 0;
+  font-size: 14px;
+  max-width: 580px;
+  margin: 0 auto;
 }
 
-.tagg {
-  display: inline-block;
-  background-color: #d8e8dc;
-  color: #12372a;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 4px 10px;
-  border-radius: 12px;
-}
-
-/* Huvudruta för bokningen */
+/* Huvudkortet */
 .boka-ruta {
   background-color: #ffffff;
-  max-width: 700px;
-  margin: 20px auto;
-  padding: 25px;
-  border: 1px solid #dddddd;
+  border: 1px solid #e1e7ec;
   border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  margin-bottom: 20px;
 }
 
 .steg {
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 
 .steg-rubrik {
@@ -55,279 +81,314 @@ body {
   margin-bottom: 10px;
 }
 
-.steg h2 {
-  font-size: 14px;
-  color: #333333;
-  margin: 0 0 10px 0;
+.steg-rubrik h2 {
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  color: #444444;
+  margin: 0;
 }
 
-/* Välj dag */
+.steg-meta {
+  font-size: 12px;
+  color: #666666;
+}
+
+/* Steg 1: Dagar */
 .dagar-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
 }
 
 .dag-kort {
-  flex: 1;
-  display: block;
-  border: 1px solid #cccccc;
+  border: 1px solid #e2e8ee;
   border-radius: 6px;
-  padding: 10px 5px;
+  padding: 12px 6px;
   text-align: center;
-  background-color: #ffffff;
   cursor: pointer;
-}
-
-.dag-kort input[type="radio"] {
-  cursor: pointer;
-}
-
-.dag-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 5px;
+  gap: 3px;
+  background-color: #ffffff;
 }
 
-.dag-namn {
-  font-size: 13px;
-  color: #555555;
+.dag-kort input {
+  display: none;
+}
+
+.dag-rel {
+  font-size: 11px;
+  color: #444444;
 }
 
 .dag-nummer {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
-  color: #12372a;
-  margin-top: 2px;
+  color: #1b4d3e;
 }
 
-/* Välj antal spelare */
+.dag-veckodag {
+  font-size: 11px;
+  color: #777777;
+}
+
+.dag-kort.vald {
+  border: 2px solid #1b4d3e;
+  background-color: #f2f7f5;
+}
+
+/* Steg 2: Spelare */
 .spelare-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
 .spelare-val {
-  flex: 1;
-  border: 1px solid #cccccc;
-  border-radius: 6px;
+  border: 1px solid #e2e8ee;
+  border-radius: 4px;
   padding: 10px;
   text-align: center;
+  cursor: pointer;
+  font-size: 13px;
   background-color: #ffffff;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  font-size: 14px;
+  color: #333333;
 }
 
-.spelare-val input[type="radio"] {
-  cursor: pointer;
+.spelare-val input {
+  display: none;
 }
 
-/* Steg 3: Tillgängliga tider */
+.spelare-val.vald {
+  background-color: #1b4d3e;
+  color: #ffffff;
+  border-color: #1b4d3e;
+}
+
+/* Steg 3: Tider */
 .tider-lista {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .tid-kort {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border: 1px solid #cccccc;
+  background-color: #f8fafb;
+  border: 1px solid #e4eaee;
   border-radius: 6px;
-  padding: 12px 15px;
-  background-color: #ffffff;
+  padding: 14px 18px;
+  cursor: pointer;
+}
+
+.tid-kort input {
+  display: none;
+}
+
+.tid-cirkel {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #b7c2cc;
+  border-radius: 50%;
+  margin-right: 14px;
+  flex-shrink: 0;
 }
 
 .tid-kort.vald {
-  border: 2px solid #12372a;
-  background-color: #f1f7f3;
+  border: 2px solid #1b4d3e;
+  background-color: #ffffff;
 }
 
-.tid-vanster {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.tid-kort.vald .tid-cirkel {
+  border-color: #1b4d3e;
+  background-color: #1b4d3e;
+  box-shadow: inset 0 0 0 3px #ffffff;
 }
 
-.tid-vanster input[type="radio"] {
-  cursor: pointer;
+.tid-klockslag {
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 12px;
 }
 
-.tid-vanster label {
-  cursor: pointer;
-}
-
-.tid-hoger {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+.tid-beskrivning {
+  color: #555555;
+  font-size: 13px;
+  flex-grow: 1;
 }
 
 .platser-kvar {
-  background-color: #e2f0e6;
-  color: #12372a;
-  font-size: 12px;
-  padding: 4px 8px;
+  background-color: #e4eee9;
+  color: #1b4d3e;
+  font-size: 11px;
+  padding: 3px 8px;
   border-radius: 4px;
+  margin-right: 16px;
 }
 
 .pris {
   font-weight: bold;
+  font-size: 15px;
 }
 
-/* Summering och bekräfta-knapp */
-.summering {
+/* Summering & bokningsknapp */
+.summering-rad {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #edf1f4;
   padding-top: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .summering-titel {
-  font-size: 12px;
-  color: #777777;
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  color: #555555;
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 2px;
 }
 
 .totalt-pris {
   font-size: 24px;
   font-weight: bold;
   color: #111111;
-  margin: 5px 0 0 0;
 }
 
 .boka-knapp {
-  background-color: #12372a;
+  background-color: #1b4d3e;
   color: #ffffff;
   border: none;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-size: 14px;
+  border-radius: 4px;
+  padding: 12px 22px;
   font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 0.5px;
   cursor: pointer;
 }
 
 .boka-knapp:hover {
-  background-color: #0b241c;
+  background-color: #12382c;
 }
 
 /* Informationsrutor */
 .info-sektion {
-  max-width: 700px;
-  margin: 20px auto;
-  display: flex;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 40px;
 }
 
 .info-kort {
-  flex: 1;
-  background-color: #edf2ee;
-  padding: 15px;
+  background-color: #f8fafc;
+  border: 1px solid #e6ecf1;
   border-radius: 6px;
+  padding: 18px;
 }
 
-.info-kort h3 {
+.info-rubrik-rad {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  color: #1b4d3e;
+}
+
+.info-rubrik-rad i {
+  font-size: 16px;
+}
+
+.info-rubrik-rad h3 {
   font-size: 14px;
-  margin-top: 0;
-  margin-bottom: 8px;
-  color: #12372a;
+  color: #1b4d3e;
+  margin: 0;
 }
 
 .info-kort p {
   font-size: 13px;
-  color: #444444;
-  margin: 0;
+  color: #555555;
   line-height: 1.4;
+  margin: 0;
 }
 
 .info-kort a {
-  color: #12372a;
+  color: #1b4d3e;
   font-weight: bold;
+  text-decoration: underline;
 }
 
-/* Nyhetsbrev */
+/* Nyhetsbrev längst ner */
 .nyhetsbrev {
   text-align: center;
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 0 15px;
+  padding: 20px 0 40px;
+}
+
+.nyhetsbrev-tagg {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #666666;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
 }
 
 .nyhetsbrev h2 {
-  font-size: 26px;
-  color: #12372a;
-  margin: 10px 0;
+  font-family: 'Georgia', serif;
+  font-size: 32px;
+  color: #1b4d3e;
+  font-weight: normal;
+  margin-bottom: 8px;
 }
 
 .nyhetsbrev p {
+  font-size: 13px;
   color: #666666;
-  font-size: 14px;
+  max-width: 500px;
+  margin: 0 auto 20px auto;
 }
 
 .nyhetsbrev-form {
-  margin-top: 15px;
   display: flex;
-  gap: 8px;
   justify-content: center;
+  gap: 10px;
 }
 
 .nyhetsbrev-form input {
-  padding: 10px;
-  border: 1px solid #cccccc;
+  padding: 10px 14px;
+  border: 1px solid #ccd5dc;
   border-radius: 4px;
-  width: 60%;
+  width: 280px;
+  font-size: 14px;
 }
 
 .nyhetsbrev-form button {
-  background-color: #12372a;
-  color: white;
+  background-color: #1b4d3e;
+  color: #ffffff;
   border: none;
-  padding: 10px 20px;
   border-radius: 4px;
+  padding: 10px 18px;
+  font-size: 13px;
+  font-weight: bold;
   cursor: pointer;
 }
 
-.nyhetsbrev-form button:hover {
-  background-color: #0b241c;
-}
-
-/* Responsiv anpassning för mobil */
+/* Mobilanpassning */
 @media (max-width: 650px) {
   .dagar-container {
-    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .dag-kort {
-    min-width: 45%;
-  }
-
-  .spelare-container {
-    flex-wrap: wrap;
-  }
-
-  .spelare-val {
-    min-width: 45%;
-  }
-
   .info-sektion {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
-
-  .summering {
+  .summering-rad {
     flex-direction: column;
-    gap: 15px;
     align-items: flex-start;
+    gap: 14px;
   }
-
-  .boka-knapp {
-    width: 100%;
+  .nyhetsbrev-form {
+    flex-direction: column;
+    align-items: center;
   }
 }
