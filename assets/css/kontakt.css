@@ -93,7 +93,54 @@ body {
   text-decoration: underline;
 }
 
-/* Formulär till höger */
+/* Besöksadress text */
+.adress-text {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #333333;
+}
+
+/* Underkort för bil och buss (Figma-stil) */
+.transport-kort {
+  background-color: #f3f5f8;
+  border-left: 4px solid #1b4d3e;
+  border-radius: 4px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+
+.transport-kort h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #1b4d3e;
+  margin-top: 0;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.transport-kort p {
+  font-size: 13px;
+  line-height: 1.45;
+  color: #444444;
+  margin: 0;
+}
+
+/* Ikoner för bil, buss och transport */
+.transport-kort h3 i,
+.bil-ikon,
+.buss-ikon {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  color: #1b4d3e;
+  flex-shrink: 0;
+}
+
+/* Kontakt formulär */
 .kontakt-formular {
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
