@@ -31,3 +31,16 @@ h1{
 a{
   text-decoration: none;
 }
+.Shop {
+  padding-top: 100px;
+  width: 500px;
+  margin: 0 auto;
+}
+.shop-text h1{
+  text-align: center;
+  font-size: var(--text-4xl);
+  color: var(--first-color);
+}
+ a{
+  text-decoration: none;
+}
