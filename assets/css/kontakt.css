@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f7f9f8;
+  background-color: #f7f9ff !important;
   color: #333333;
   line-height: 1.6;
 }
@@ -196,8 +196,7 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
-
-.kontakt-formular button:hover {
+b .kontakt-formular button:hover {
   background-color: #13382d;
 }
 
@@ -220,15 +219,6 @@ body {
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
-}
-
-/* Enkel sidfot */
-footer {
-  text-align: center;
-  padding: 25px;
-  background-color: #1b4d3e;
-  color: #ffffff;
-  font-size: 14px;
 }
 
 /* Responsiv layout för mobil */
