@@ -4,9 +4,12 @@ main {
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
-   
-    
+  
 }
+body {
+background-color: #f7f9ff !important;
+}
+
 /*Shop Hero*/
 .shop-hero {
     background-color: #f7f9ff;
