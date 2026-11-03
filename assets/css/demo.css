@@ -1,0 +1,44 @@
+:root {
+  /*========== Colors ==========*/
+  --first-color: #1b4d3e;
+  --first-color-light: #8abda9;
+  --first-color-alt: #735c00;
+  --title-color: #003629;
+  --text-color: #404945;
+  --text-color-alt: #181c20;
+  --body-text-color: #f7f9ff;
+
+  --body-color: #ffffff;
+  --body-color-alt: #f7f9ff;
+  --text-4xl: clamp(1.875rem, 1.5rem + 1.8vw, 3rem);
+}
+
+
+body {
+
+  background-color: var(--body-color);
+}
+
+.section {
+  padding-top: 100px;
+  max-width: 500px;
+  max-height: 500px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+h1 {
+  padding-top: 50px;
+  text-align: center;
+  font-size: var(--text-4xl);
+  color: var(--first-color);
+}
+
+a {
+  text-decoration: none;
+}
