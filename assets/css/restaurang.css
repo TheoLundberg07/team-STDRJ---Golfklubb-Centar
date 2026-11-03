@@ -230,7 +230,7 @@ hr {
 
 .card .phone-field {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 1fr max-content;
   grid-template-rows: repeat(2, auto);
   padding: 0.5rem;
   margin-block: 1rem;
