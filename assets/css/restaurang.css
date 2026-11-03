@@ -71,6 +71,11 @@ body {
   color: var(--text-color);
 }
 
+main {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
 input,
 button {
   border: none;
@@ -357,6 +362,13 @@ hr {
 
 .menu-card:nth-child(2) ul li:last-child .label {
   text-transform: uppercase;
+}
+
+@media (max-width: 1000px) {
+  .menu-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
 }
 
 @media (max-width: 900px) {
