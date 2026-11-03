@@ -1,3 +1,12 @@
+main {
+    width: calc(100% - 18px);
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+   
+    
+}
 /*Shop Hero*/
 .shop-hero {
     background-color: #f7f9ff;
