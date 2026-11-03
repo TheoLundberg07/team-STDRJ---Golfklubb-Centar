@@ -31,145 +31,166 @@
 
   <body>
     <!--==================== HEADER & NAV ====================-->
-    <!--==================== HEADER & NAV ====================-->
-    <header id="header"></header>
+    <header class="header" id="header"></header>
 
     <!--==================== MAIN ====================-->
     <main class="boka-sida">
       <div class="boka-container">
 
-        <!-- Rubrik och introduktion -->
+        <!-- Sidhuvud / Intro -->
         <header class="boka-intro">
           <span class="tagg"><span class="tagg-prick"></span> TIDBOKNING</span>
           <h1>Boka Starttid</h1>
           <p>Reservera er starttid på vår mästerskapsbana med några enkla klick. Logga gärna in med Min Golf för automatisk medlemsrabatt och snabbare registrering.</p>
         </header>
 
-        <!-- Bokningsruta -->
+        <!-- Bokningskort -->
         <div class="boka-ruta">
-          <form action="#" method="post">
+          <form action="#" method="get">
 
-            <!-- Välj dag -->
+            <!-- Välj speldag -->
             <div class="steg">
               <div class="steg-rubrik">
                 <h2>1. VÄLJ SPELDAG</h2>
-                <span class="steg-meta">Maj 2027</span>
+                <span class="steg-meta">Maj 2025</span>
               </div>
 
               <div class="dagar-container">
-                <label class="dag-kort vald">
+                <label class="dag-kort">
                   <input type="radio" name="speldag" value="14" checked>
-                  <span class="dag-rel">Idag</span>
-                  <span class="dag-nummer">14</span>
-                  <span class="dag-veckodag">Ons</span>
+                  <span class="box-innehall">
+                    <span class="liten-text">Idag</span>
+                    <span class="siffra">14</span>
+                    <span class="liten-text">Ons</span>
+                  </span>
                 </label>
 
                 <label class="dag-kort">
                   <input type="radio" name="speldag" value="15">
-                  <span class="dag-rel">Imorgon</span>
-                  <span class="dag-nummer">15</span>
-                  <span class="dag-veckodag">Tor</span>
+                  <span class="box-innehall">
+                    <span class="liten-text">Imorgon</span>
+                    <span class="siffra">15</span>
+                    <span class="liten-text">Tor</span>
+                  </span>
                 </label>
 
                 <label class="dag-kort">
                   <input type="radio" name="speldag" value="16">
-                  <span class="dag-rel">Fredag</span>
-                  <span class="dag-nummer">16</span>
-                  <span class="dag-veckodag">Fre</span>
+                  <span class="box-innehall">
+                    <span class="liten-text">Fredag</span>
+                    <span class="siffra">16</span>
+                    <span class="liten-text">Fre</span>
+                  </span>
                 </label>
 
                 <label class="dag-kort">
                   <input type="radio" name="speldag" value="17">
-                  <span class="dag-rel">Lördag</span>
-                  <span class="dag-nummer">17</span>
-                  <span class="dag-veckodag">Lör</span>
+                  <span class="box-innehall">
+                    <span class="liten-text">Lördag</span>
+                    <span class="siffra">17</span>
+                    <span class="liten-text">Lör</span>
+                  </span>
                 </label>
 
                 <label class="dag-kort">
                   <input type="radio" name="speldag" value="18">
-                  <span class="dag-rel">Söndag</span>
-                  <span class="dag-nummer">18</span>
-                  <span class="dag-veckodag">Sön</span>
+                  <span class="box-innehall">
+                    <span class="liten-text">Söndag</span>
+                    <span class="siffra">18</span>
+                    <span class="liten-text">Sön</span>
+                  </span>
                 </label>
               </div>
             </div>
 
-            <!-- Välj antal spelare -->
+            <!-- Antal spelare -->
             <div class="steg">
               <div class="steg-rubrik">
                 <h2>2. ANTAL SPELARE</h2>
               </div>
+
               <div class="spelare-container">
-                <label class="spelare-val">
+                <label class="spelare-kort">
                   <input type="radio" name="spelare" value="1">
-                  <span><strong>1</strong> spelare</span>
+                  <span class="spelare-box"><strong>1</strong> spelare</span>
                 </label>
-                <label class="spelare-val vald">
+
+                <label class="spelare-kort">
                   <input type="radio" name="spelare" value="2" checked>
-                  <span><strong>2</strong> spelare</span>
+                  <span class="spelare-box"><strong>2</strong> spelare</span>
                 </label>
-                <label class="spelare-val">
+
+                <label class="spelare-kort">
                   <input type="radio" name="spelare" value="3">
-                  <span><strong>3</strong> spelare</span>
+                  <span class="spelare-box"><strong>3</strong> spelare</span>
                 </label>
-                <label class="spelare-val">
+
+                <label class="spelare-kort">
                   <input type="radio" name="spelare" value="4">
-                  <span><strong>4</strong> spelare</span>
+                  <span class="spelare-box"><strong>4</strong> spelare</span>
                 </label>
               </div>
             </div>
 
-            <!-- Välj tid -->
+            <!-- Tider -->
             <div class="steg">
               <div class="steg-rubrik">
                 <h2>3. TILLGÄNGLIGA TIDER</h2>
                 <span class="steg-meta">18 hål &bull; Banstatus: Utmärkt</span>
               </div>
 
-              <div class="tider-lista">
+              <div class="tider-container">
                 <label class="tid-kort">
                   <input type="radio" name="tid" value="09:10">
-                  <span class="tid-cirkel"></span>
-                  <span class="tid-klockslag">09:10</span>
-                  <span class="tid-beskrivning">Morgonrunda</span>
-                  <span class="platser-kvar">3 platser kvar</span>
-                  <span class="pris">650 kr</span>
+                  <span class="tid-rad">
+                    <span class="cirkel"></span>
+                    <strong class="klockslag">09:10</strong>
+                    <span class="rubrik-tid">Morgonrunda</span>
+                    <span class="platser">3 platser kvar</span>
+                    <span class="pris">650 kr</span>
+                  </span>
                 </label>
 
-                <label class="tid-kort vald">
+                <label class="tid-kort">
                   <input type="radio" name="tid" value="09:40" checked>
-                  <span class="tid-cirkel"></span>
-                  <span class="tid-klockslag">09:40</span>
-                  <span class="tid-beskrivning">Populär tid</span>
-                  <span class="platser-kvar">2 platser kvar</span>
-                  <span class="pris">650 kr</span>
+                  <span class="tid-rad">
+                    <span class="cirkel"></span>
+                    <strong class="klockslag">09:40</strong>
+                    <span class="rubrik-tid">Populär tid</span>
+                    <span class="platser">2 platser kvar</span>
+                    <span class="pris">650 kr</span>
+                  </span>
                 </label>
 
                 <label class="tid-kort">
                   <input type="radio" name="tid" value="10:20">
-                  <span class="tid-cirkel"></span>
-                  <span class="tid-klockslag">10:20</span>
-                  <span class="tid-beskrivning">Förmiddag</span>
-                  <span class="platser-kvar">4 platser kvar</span>
-                  <span class="pris">750 kr</span>
+                  <span class="tid-rad">
+                    <span class="cirkel"></span>
+                    <strong class="klockslag">10:20</strong>
+                    <span class="rubrik-tid">Förmiddag</span>
+                    <span class="platser">4 platser kvar</span>
+                    <span class="pris">750 kr</span>
+                  </span>
                 </label>
 
                 <label class="tid-kort">
                   <input type="radio" name="tid" value="11:00">
-                  <span class="tid-cirkel"></span>
-                  <span class="tid-klockslag">11:00</span>
-                  <span class="tid-beskrivning">Lunchtid</span>
-                  <span class="platser-kvar">4 platser kvar</span>
-                  <span class="pris">750 kr</span>
+                  <span class="tid-rad">
+                    <span class="cirkel"></span>
+                    <strong class="klockslag">11:00</strong>
+                    <span class="rubrik-tid">Lunchtid</span>
+                    <span class="platser">4 platser kvar</span>
+                    <span class="pris">750 kr</span>
+                  </span>
                 </label>
               </div>
             </div>
 
-            <!-- Summering och knapp -->
+            <!-- Summering och knap -->
             <div class="summering-rad">
-              <div class="summering-pris">
-                <span class="summering-titel">TOTALT GREENFEE (2 PERS)</span>
-                <span class="totalt-pris">1 300 kr</span>
+              <div class="summering-text">
+                <p class="summering-titel">TOTALT GREENFEE (2 PERS)</p>
+                <p class="totalt-pris">1 300 kr</p>
               </div>
               <button type="submit" class="boka-knapp">BEKRÄFTA &amp; GÅ VIDARE &rarr;</button>
             </div>
@@ -177,7 +198,7 @@
           </form>
         </div>
 
-        <!-- Informationsrutor under bokningskortet -->
+        <!-- Informationskort -->
         <div class="info-sektion">
           <div class="info-kort">
             <div class="info-rubrik-rad">
@@ -201,24 +222,17 @@
           <span class="nyhetsbrev-tagg">NYHETSBREV</span>
           <h2>Håll dig uppdaterad</h2>
           <p>Få de senaste banrapporterna, inbjudningar till klubbtävlingar och exklusiva medlemserbjudanden direkt till din inkorg.</p>
-          <form action="#" method="post" class="nyhetsbrev-form">
+          <form action="#" method="get" class="nyhetsbrev-form">
             <input type="email" placeholder="Din e-postadress" required>
             <button type="submit">Prenumerera</button>
           </form>
         </section>
-
       </div>
     </main>
-    <!--==================== NEWSLETTER ====================-->
-    <section id="newsletter" class="newsletter"></section>
 
     <!--==================== FOOTER ====================-->
+    <footer id="newsletter"></footer>
     <footer id="footer" class="footer"></footer>
-
-    <!--=============== Javascript ===============-->
     <script src="./assets/js/script.js" defer></script>
-  </body>
-</html>
-
   </body>
 </html>
