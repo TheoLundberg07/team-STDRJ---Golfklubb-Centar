@@ -20,7 +20,7 @@ body {
 }
 
 .nav {
-  max-width: 900px;
+  max-width: 760px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -52,14 +52,14 @@ body {
   color: #1b4d3e;
 }
 
-/* Behållare */
+/* Sidbehållare */
 .boka-container {
   max-width: 760px;
   margin: 30px auto;
   padding: 0 16px;
 }
 
-/* Introduktion */
+/* Intro-sektion */
 .boka-intro {
   text-align: center;
   margin-bottom: 24px;
@@ -106,7 +106,7 @@ body {
   background-color: #ffffff;
   border: 1px solid #e1e7ec;
   border-radius: 8px;
-  padding: 24px;
+  padding: 28px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   margin-bottom: 20px;
 }
@@ -119,7 +119,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .steg-rubrik h2 {
@@ -134,91 +134,95 @@ body {
   color: #666666;
 }
 
-/* Välj dag */
+/* Speldag */
 .dagar-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 8px;
+  gap: 10px;
 }
 
 .dag-kort {
   cursor: pointer;
+  display: block;
 }
 
 .dag-kort input {
   display: none;
 }
 
-.dag-innehall {
-  border: 1px solid #e2e8ee;
-  border-radius: 6px;
-  padding: 10px 4px;
-  text-align: center;
+.dag-kort .box-innehall {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 3px;
+  padding: 12px 6px;
   background-color: #ffffff;
+  border: 1px solid #e2e8ee;
+  border-radius: 6px;
   transition: all 0.2s ease;
 }
 
-.dag-rel {
-  font-size: 11px;
-  color: #555555;
-}
-
-.dag-nummer {
-  font-size: 20px;
+.dag-kort .siffra {
+  font-size: 22px;
   font-weight: bold;
   color: #1b4d3e;
 }
 
-.dag-veckodag {
+.dag-kort .liten-text {
   font-size: 11px;
-  color: #777777;
+  color: #555555;
 }
 
-/* Klickad/Aktiv dag */
-.dag-kort input:checked + .dag-innehall {
+.dag-kort:hover .box-innehall {
+  border-color: #1b4d3e;
+}
+
+.dag-kort input:checked + .box-innehall {
   border: 2px solid #1b4d3e;
   background-color: #f2f7f5;
 }
 
-/* Välj antal spelare */
+/* Antal spelare */
 .spelare-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
+  gap: 10px;
 }
 
-.spelare-val {
+.spelare-kort {
   cursor: pointer;
+  display: block;
 }
 
-.spelare-val input {
+.spelare-kort input {
   display: none;
 }
 
-.spelare-innehall {
+.spelare-box {
   display: block;
+  text-align: center;
+  padding: 11px 8px;
+  background-color: #ffffff;
   border: 1px solid #e2e8ee;
   border-radius: 4px;
-  padding: 10px;
-  text-align: center;
   font-size: 13px;
-  background-color: #ffffff;
   color: #333333;
   transition: all 0.2s ease;
 }
 
-/* Klickad/Aktiv spelare */
-.spelare-val input:checked + .spelare-innehall {
-  background-color: #1b4d3e;
-  color: #ffffff;
+.spelare-kort:hover .spelare-box {
   border-color: #1b4d3e;
 }
 
-/* Välj tid */
-.tider-lista {
+.spelare-kort input:checked + .spelare-box {
+  background-color: #1b4d3e;
+  border-color: #1b4d3e;
+  color: #ffffff;
+}
+
+/* Tider */
+.tider-container {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -226,23 +230,24 @@ body {
 
 .tid-kort {
   cursor: pointer;
+  display: block;
 }
 
 .tid-kort input {
   display: none;
 }
 
-.tid-innehall {
+.tid-rad {
   display: flex;
   align-items: center;
-  background-color: #f8fafb;
-  border: 1px solid #e4eaee;
+  background-color: #ffffff;
+  border: 1px solid #e2e8ee;
   border-radius: 6px;
-  padding: 12px 16px;
+  padding: 13px 16px;
   transition: all 0.2s ease;
 }
 
-.tid-cirkel {
+.tid-rad .cirkel {
   width: 14px;
   height: 14px;
   border: 2px solid #b7c2cc;
@@ -251,66 +256,71 @@ body {
   flex-shrink: 0;
 }
 
-.tid-klockslag {
-  font-weight: bold;
+.tid-rad .klockslag {
   font-size: 15px;
+  color: #222222;
   margin-right: 12px;
 }
 
-.tid-beskrivning {
-  color: #555555;
+.tid-rad .rubrik-tid {
   font-size: 13px;
+  color: #555555;
   flex-grow: 1;
 }
 
-.platser-kvar {
+.tid-rad .platser {
   background-color: #e4eee9;
   color: #1b4d3e;
   font-size: 11px;
+  font-weight: 500;
   padding: 3px 8px;
   border-radius: 4px;
   margin-right: 14px;
 }
 
-.pris {
-  font-weight: bold;
+.tid-rad .pris {
   font-size: 14px;
+  font-weight: bold;
+  color: #222222;
 }
 
-/* Klickad/Aktiv tid */
-.tid-kort input:checked + .tid-innehall {
+.tid-kort:hover .tid-rad {
+  border-color: #1b4d3e;
+}
+
+.tid-kort input:checked + .tid-rad {
   border: 2px solid #1b4d3e;
-  background-color: #ffffff;
 }
 
-.tid-kort input:checked + .tid-innehall .tid-cirkel {
+.tid-kort input:checked + .tid-rad .cirkel {
   border-color: #1b4d3e;
   background-color: #1b4d3e;
   box-shadow: inset 0 0 0 3px #ffffff;
 }
 
-/* Summering och knapp */
+/* Summering och knap */
 .summering-rad {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #edf1f4;
   padding-top: 18px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .summering-titel {
-  display: block;
   font-size: 11px;
-  letter-spacing: 0.8px;
-  color: #555555;
   font-weight: bold;
+  letter-spacing: 0.5px;
+  color: #555555;
+  margin-bottom: 2px;
 }
 
 .totalt-pris {
   font-size: 22px;
   font-weight: bold;
   color: #111111;
+  margin: 0;
 }
 
 .boka-knapp {
@@ -318,18 +328,19 @@ body {
   color: #ffffff;
   border: none;
   border-radius: 4px;
-  padding: 12px 20px;
+  padding: 12px 22px;
   font-weight: bold;
   font-size: 13px;
+  letter-spacing: 0.5px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s ease;
 }
 
 .boka-knapp:hover {
-  background-color: #12382c;
+  background-color: #13382d;
 }
 
-/* Informationsrutor */
+/* Informationskort */
 .info-sektion {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -372,6 +383,7 @@ body {
 .info-kort a {
   color: #1b4d3e;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 /* Nyhetsbrev */
@@ -429,6 +441,10 @@ body {
   cursor: pointer;
 }
 
+.nyhetsbrev-form button:hover {
+  background-color: #13382d;
+}
+
 /* Footer */
 .footer {
   background-color: #1b4d3e;
@@ -439,7 +455,7 @@ body {
   margin-top: 20px;
 }
 
-/* MOBILANPASSNING (Telefoner under 650px) */
+/* Mobilanpassning */
 @media (max-width: 650px) {
   .nav {
     flex-direction: column;
@@ -454,12 +470,12 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .tid-innehall {
+  .tid-rad {
     flex-wrap: wrap;
     gap: 6px;
   }
 
-  .tid-beskrivning {
+  .tid-rad .rubrik-tid {
     width: 100%;
     order: 3;
     font-size: 12px;
